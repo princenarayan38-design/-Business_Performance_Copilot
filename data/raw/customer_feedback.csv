@@ -1,0 +1,1246 @@
+date,customer_id,region,product_id,feedback,sentiment,category
+2026-01-05,C00001,North,P001,Packaging could be better.,neutral,customer_support
+2026-01-05,C00002,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-01-05,C00003,South,P001,"Average experience, nothing special.",neutral,pricing
+2026-01-05,C00004,East,P002,"Average experience, nothing special.",neutral,customer_support
+2026-01-05,C00005,East,P002,Not as described on the listing.,negative,customer_support
+2026-01-05,C00006,East,P004,Product stopped working after a week.,negative,product_quality
+2026-01-06,C00007,North,P004,Really happy with the product quality.,positive,product_quality
+2026-01-06,C00008,South,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-06,C00009,East,P003,Really happy with the product quality.,positive,product_quality
+2026-01-06,C00010,West,P004,Great value for the price.,positive,product_quality
+2026-01-06,C00011,West,P004,Really happy with the product quality.,positive,product_quality
+2026-01-07,C00012,North,P001,Great value for the price.,positive,product_quality
+2026-01-07,C00013,South,P004,"Average experience, nothing special.",neutral,product_quality
+2026-01-07,C00014,South,P004,Fast setup and easy to use.,positive,product_quality
+2026-01-07,C00015,East,P003,"It's okay, does what it says.",neutral,packaging
+2026-01-07,C00016,East,P003,Customer support was slow to respond.,negative,pricing
+2026-01-08,C00017,South,P001,Great value for the price.,positive,product_quality
+2026-01-08,C00018,South,P001,Really happy with the product quality.,positive,product_quality
+2026-01-08,C00019,South,P001,"It's okay, does what it says.",neutral,product_quality
+2026-01-08,C00020,West,P002,Really happy with the product quality.,positive,product_quality
+2026-01-09,C00021,South,P002,Fast setup and easy to use.,positive,product_quality
+2026-01-09,C00022,East,P001,Great value for the price.,positive,product_quality
+2026-01-10,C00023,North,P001,Fast setup and easy to use.,positive,product_quality
+2026-01-10,C00024,North,P001,"It's okay, does what it says.",neutral,pricing
+2026-01-10,C00025,South,P003,"Average experience, nothing special.",neutral,product_quality
+2026-01-10,C00026,South,P004,Really happy with the product quality.,positive,product_quality
+2026-01-10,C00027,West,P003,"It's okay, does what it says.",neutral,product_quality
+2026-01-11,C00028,North,P001,"It's okay, does what it says.",neutral,customer_support
+2026-01-11,C00029,South,P004,Not as described on the listing.,negative,packaging
+2026-01-11,C00030,South,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-11,C00031,South,P003,Product stopped working after a week.,negative,packaging
+2026-01-11,C00032,East,P004,Not as described on the listing.,negative,product_quality
+2026-01-11,C00033,West,P004,Packaging could be better.,neutral,customer_support
+2026-01-11,C00034,West,P004,Not as described on the listing.,negative,customer_support
+2026-01-12,C00035,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-01-12,C00036,South,P003,Customer support was slow to respond.,negative,pricing
+2026-01-12,C00037,East,P004,Great value for the price.,positive,product_quality
+2026-01-12,C00038,West,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-13,C00039,North,P003,Great value for the price.,positive,product_quality
+2026-01-13,C00040,North,P002,Not as described on the listing.,negative,packaging
+2026-01-13,C00041,South,P001,Product stopped working after a week.,negative,pricing
+2026-01-13,C00042,South,P001,"Average experience, nothing special.",neutral,product_quality
+2026-01-13,C00043,South,P002,"Average experience, nothing special.",neutral,packaging
+2026-01-13,C00044,East,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-13,C00045,East,P003,Great value for the price.,positive,product_quality
+2026-01-13,C00046,East,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-13,C00047,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-01-14,C00048,South,P002,"It's okay, does what it says.",neutral,pricing
+2026-01-14,C00049,East,P001,Really happy with the product quality.,positive,product_quality
+2026-01-14,C00050,East,P001,Not as described on the listing.,negative,customer_support
+2026-01-14,C00051,West,P001,Not as described on the listing.,negative,packaging
+2026-01-14,C00052,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-01-14,C00053,West,P001,Product stopped working after a week.,negative,packaging
+2026-01-15,C00054,North,P004,"Average experience, nothing special.",neutral,product_quality
+2026-01-15,C00055,North,P003,Great value for the price.,positive,product_quality
+2026-01-15,C00056,East,P004,Not as described on the listing.,negative,pricing
+2026-01-15,C00057,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-01-15,C00058,West,P001,Packaging could be better.,neutral,product_quality
+2026-01-15,C00059,West,P001,"Average experience, nothing special.",neutral,customer_support
+2026-01-16,C00060,North,P001,Product stopped working after a week.,negative,pricing
+2026-01-16,C00061,South,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-16,C00062,South,P001,Customer support was slow to respond.,negative,customer_support
+2026-01-16,C00063,East,P002,Not as described on the listing.,negative,product_quality
+2026-01-16,C00064,East,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-17,C00065,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-01-17,C00066,North,P002,Not as described on the listing.,negative,pricing
+2026-01-17,C00067,South,P004,Fast setup and easy to use.,positive,product_quality
+2026-01-17,C00068,East,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-17,C00069,East,P002,Great value for the price.,positive,product_quality
+2026-01-17,C00070,West,P003,Customer support was slow to respond.,negative,customer_support
+2026-01-17,C00071,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-01-17,C00072,West,P001,"Average experience, nothing special.",neutral,product_quality
+2026-01-17,C00073,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-01-18,C00074,North,P002,"Average experience, nothing special.",neutral,customer_support
+2026-01-18,C00075,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-01-18,C00076,East,P004,"Average experience, nothing special.",neutral,pricing
+2026-01-18,C00077,West,P001,Not as described on the listing.,negative,pricing
+2026-01-19,C00078,South,P001,"Average experience, nothing special.",neutral,packaging
+2026-01-19,C00079,East,P003,Great value for the price.,positive,product_quality
+2026-01-19,C00080,East,P002,"Average experience, nothing special.",neutral,pricing
+2026-01-19,C00081,East,P003,"It's okay, does what it says.",neutral,packaging
+2026-01-19,C00082,West,P003,Product stopped working after a week.,negative,pricing
+2026-01-19,C00083,West,P003,Customer support was slow to respond.,negative,customer_support
+2026-01-20,C00084,North,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-20,C00085,North,P004,Product stopped working after a week.,negative,customer_support
+2026-01-20,C00086,South,P002,Great value for the price.,positive,product_quality
+2026-01-20,C00087,South,P001,Packaging could be better.,neutral,pricing
+2026-01-20,C00088,South,P001,Product stopped working after a week.,negative,customer_support
+2026-01-20,C00089,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-01-20,C00090,South,P003,Customer support was slow to respond.,negative,packaging
+2026-01-20,C00091,South,P002,"It's okay, does what it says.",neutral,product_quality
+2026-01-20,C00092,East,P002,Really happy with the product quality.,positive,product_quality
+2026-01-20,C00093,East,P004,Product stopped working after a week.,negative,product_quality
+2026-01-20,C00094,West,P002,Customer support was slow to respond.,negative,pricing
+2026-01-20,C00095,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-01-20,C00096,West,P002,Customer support was slow to respond.,negative,product_quality
+2026-01-20,C00097,West,P004,Really happy with the product quality.,positive,product_quality
+2026-01-21,C00098,South,P003,Great value for the price.,positive,product_quality
+2026-01-21,C00099,East,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-21,C00100,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-01-21,C00101,West,P004,Customer support was slow to respond.,negative,customer_support
+2026-01-21,C00102,West,P004,"It's okay, does what it says.",neutral,packaging
+2026-01-22,C00103,North,P004,Great value for the price.,positive,product_quality
+2026-01-22,C00104,North,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-22,C00105,North,P004,"It's okay, does what it says.",neutral,product_quality
+2026-01-22,C00106,North,P001,Great value for the price.,positive,product_quality
+2026-01-22,C00107,South,P002,"Average experience, nothing special.",neutral,customer_support
+2026-01-22,C00108,East,P003,Fast setup and easy to use.,positive,product_quality
+2026-01-22,C00109,East,P002,Packaging could be better.,neutral,customer_support
+2026-01-22,C00110,West,P001,Customer support was slow to respond.,negative,customer_support
+2026-01-22,C00111,West,P003,Customer support was slow to respond.,negative,packaging
+2026-01-22,C00112,West,P002,Customer support was slow to respond.,negative,pricing
+2026-01-23,C00113,North,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-23,C00114,South,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-23,C00115,South,P002,Fast setup and easy to use.,positive,product_quality
+2026-01-23,C00116,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-01-23,C00117,East,P001,Packaging could be better.,neutral,pricing
+2026-01-23,C00118,East,P002,"Average experience, nothing special.",neutral,packaging
+2026-01-23,C00119,West,P003,Really happy with the product quality.,positive,product_quality
+2026-01-23,C00120,West,P002,Great value for the price.,positive,product_quality
+2026-01-23,C00121,West,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-24,C00122,North,P003,Great value for the price.,positive,product_quality
+2026-01-24,C00123,South,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-24,C00124,South,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-24,C00125,East,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-24,C00126,East,P004,Fast setup and easy to use.,positive,product_quality
+2026-01-24,C00127,East,P004,Fast setup and easy to use.,positive,product_quality
+2026-01-24,C00128,West,P001,Customer support was slow to respond.,negative,customer_support
+2026-01-25,C00129,North,P001,Packaging could be better.,neutral,pricing
+2026-01-25,C00130,North,P004,Great value for the price.,positive,product_quality
+2026-01-25,C00131,East,P002,Product stopped working after a week.,negative,customer_support
+2026-01-25,C00132,West,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-26,C00133,North,P002,Customer support was slow to respond.,negative,customer_support
+2026-01-26,C00134,South,P002,Customer support was slow to respond.,negative,product_quality
+2026-01-26,C00135,South,P001,"It's okay, does what it says.",neutral,packaging
+2026-01-26,C00136,East,P003,"Average experience, nothing special.",neutral,pricing
+2026-01-26,C00137,East,P001,"It's okay, does what it says.",neutral,product_quality
+2026-01-26,C00138,East,P004,Packaging could be better.,neutral,packaging
+2026-01-26,C00139,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-01-26,C00140,West,P002,Customer support was slow to respond.,negative,pricing
+2026-01-27,C00141,North,P001,Packaging could be better.,neutral,packaging
+2026-01-27,C00142,North,P001,"Average experience, nothing special.",neutral,pricing
+2026-01-27,C00143,North,P004,"It's okay, does what it says.",neutral,packaging
+2026-01-27,C00144,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-01-27,C00145,East,P004,Packaging could be better.,neutral,customer_support
+2026-01-27,C00146,East,P001,Fast setup and easy to use.,positive,product_quality
+2026-01-27,C00147,West,P003,Great value for the price.,positive,product_quality
+2026-01-27,C00148,West,P004,"It's okay, does what it says.",neutral,packaging
+2026-01-28,C00149,North,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-28,C00150,South,P001,"Average experience, nothing special.",neutral,packaging
+2026-01-28,C00151,South,P004,Customer support was slow to respond.,negative,pricing
+2026-01-28,C00152,West,P003,Customer support was slow to respond.,negative,customer_support
+2026-01-28,C00153,West,P004,Packaging could be better.,neutral,product_quality
+2026-01-29,C00154,South,P004,"Average experience, nothing special.",neutral,product_quality
+2026-01-29,C00155,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-01-29,C00156,East,P002,Not as described on the listing.,negative,product_quality
+2026-01-29,C00157,West,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-30,C00158,North,P003,"It's okay, does what it says.",neutral,pricing
+2026-01-30,C00159,North,P002,Product stopped working after a week.,negative,customer_support
+2026-01-30,C00160,North,P002,Fast setup and easy to use.,positive,product_quality
+2026-01-30,C00161,North,P002,Really happy with the product quality.,positive,product_quality
+2026-01-30,C00162,South,P002,Really happy with the product quality.,positive,product_quality
+2026-01-30,C00163,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-01-30,C00164,South,P003,Packaging could be better.,neutral,pricing
+2026-01-30,C00165,East,P003,Really happy with the product quality.,positive,product_quality
+2026-01-30,C00166,West,P003,Really happy with the product quality.,positive,product_quality
+2026-01-31,C00167,North,P004,Great value for the price.,positive,product_quality
+2026-01-31,C00168,South,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-31,C00169,South,P003,Packaging could be better.,neutral,packaging
+2026-01-31,C00170,South,P001,"It's okay, does what it says.",neutral,packaging
+2026-01-31,C00171,East,P003,"It's okay, does what it says.",neutral,customer_support
+2026-01-31,C00172,East,P004,Great value for the price.,positive,product_quality
+2026-01-31,C00173,East,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-01-31,C00174,East,P003,Packaging could be better.,neutral,customer_support
+2026-01-31,C00175,East,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-01,C00176,North,P003,Not as described on the listing.,negative,pricing
+2026-02-01,C00177,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-02-01,C00178,South,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-01,C00179,East,P003,Not as described on the listing.,negative,pricing
+2026-02-01,C00180,East,P002,Really happy with the product quality.,positive,product_quality
+2026-02-01,C00181,East,P004,Fast setup and easy to use.,positive,product_quality
+2026-02-02,C00182,South,P002,Packaging could be better.,neutral,pricing
+2026-02-02,C00183,South,P004,Great value for the price.,positive,product_quality
+2026-02-02,C00184,South,P001,Packaging could be better.,neutral,customer_support
+2026-02-02,C00185,East,P004,"It's okay, does what it says.",neutral,product_quality
+2026-02-03,C00186,North,P002,Packaging could be better.,neutral,product_quality
+2026-02-04,C00187,North,P001,Really happy with the product quality.,positive,product_quality
+2026-02-04,C00188,North,P003,Great value for the price.,positive,product_quality
+2026-02-04,C00189,South,P002,Great value for the price.,positive,product_quality
+2026-02-04,C00190,East,P001,"Average experience, nothing special.",neutral,customer_support
+2026-02-04,C00191,East,P004,Not as described on the listing.,negative,product_quality
+2026-02-04,C00192,East,P004,Great value for the price.,positive,product_quality
+2026-02-05,C00193,North,P004,Really happy with the product quality.,positive,product_quality
+2026-02-05,C00194,South,P004,Packaging could be better.,neutral,product_quality
+2026-02-05,C00195,East,P004,Fast setup and easy to use.,positive,product_quality
+2026-02-05,C00196,East,P001,Really happy with the product quality.,positive,product_quality
+2026-02-05,C00197,East,P004,"It's okay, does what it says.",neutral,pricing
+2026-02-05,C00198,East,P004,Fast setup and easy to use.,positive,product_quality
+2026-02-05,C00199,West,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-05,C00200,West,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-06,C00201,North,P002,"Average experience, nothing special.",neutral,customer_support
+2026-02-06,C00202,South,P003,Great value for the price.,positive,product_quality
+2026-02-06,C00203,South,P004,"It's okay, does what it says.",neutral,product_quality
+2026-02-06,C00204,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-02-06,C00205,East,P004,"Average experience, nothing special.",neutral,customer_support
+2026-02-06,C00206,East,P001,Great value for the price.,positive,product_quality
+2026-02-06,C00207,East,P001,Really happy with the product quality.,positive,product_quality
+2026-02-06,C00208,West,P004,Product stopped working after a week.,negative,customer_support
+2026-02-07,C00209,North,P003,Not as described on the listing.,negative,customer_support
+2026-02-07,C00210,South,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-07,C00211,South,P002,Really happy with the product quality.,positive,product_quality
+2026-02-07,C00212,East,P002,Not as described on the listing.,negative,packaging
+2026-02-07,C00213,East,P001,"It's okay, does what it says.",neutral,packaging
+2026-02-07,C00214,West,P002,"It's okay, does what it says.",neutral,product_quality
+2026-02-07,C00215,West,P001,Really happy with the product quality.,positive,product_quality
+2026-02-08,C00216,North,P003,Packaging could be better.,neutral,product_quality
+2026-02-08,C00217,North,P004,Not as described on the listing.,negative,packaging
+2026-02-08,C00218,South,P001,Really happy with the product quality.,positive,product_quality
+2026-02-08,C00219,South,P002,"Average experience, nothing special.",neutral,pricing
+2026-02-08,C00220,East,P001,"Average experience, nothing special.",neutral,packaging
+2026-02-08,C00221,East,P001,Great value for the price.,positive,product_quality
+2026-02-08,C00222,East,P002,Product stopped working after a week.,negative,product_quality
+2026-02-09,C00223,East,P002,Fast setup and easy to use.,positive,product_quality
+2026-02-09,C00224,East,P003,Packaging could be better.,neutral,pricing
+2026-02-09,C00225,West,P003,"It's okay, does what it says.",neutral,pricing
+2026-02-09,C00226,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-02-10,C00227,South,P002,Product stopped working after a week.,negative,customer_support
+2026-02-10,C00228,South,P001,Really happy with the product quality.,positive,product_quality
+2026-02-10,C00229,South,P004,Great value for the price.,positive,product_quality
+2026-02-10,C00230,South,P004,Fast setup and easy to use.,positive,product_quality
+2026-02-10,C00231,East,P004,Packaging could be better.,neutral,packaging
+2026-02-10,C00232,East,P002,Product stopped working after a week.,negative,packaging
+2026-02-10,C00233,East,P003,"Average experience, nothing special.",neutral,packaging
+2026-02-10,C00234,West,P003,Packaging could be better.,neutral,product_quality
+2026-02-10,C00235,West,P002,Great value for the price.,positive,product_quality
+2026-02-11,C00236,North,P001,Really happy with the product quality.,positive,product_quality
+2026-02-11,C00237,North,P001,Great value for the price.,positive,product_quality
+2026-02-11,C00238,North,P003,Fast setup and easy to use.,positive,product_quality
+2026-02-11,C00239,North,P004,"Average experience, nothing special.",neutral,pricing
+2026-02-11,C00240,North,P003,Customer support was slow to respond.,negative,packaging
+2026-02-11,C00241,South,P004,"Average experience, nothing special.",neutral,customer_support
+2026-02-11,C00242,South,P003,Really happy with the product quality.,positive,product_quality
+2026-02-11,C00243,South,P002,Really happy with the product quality.,positive,product_quality
+2026-02-11,C00244,South,P003,Really happy with the product quality.,positive,product_quality
+2026-02-11,C00245,East,P002,Fast setup and easy to use.,positive,product_quality
+2026-02-11,C00246,East,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-11,C00247,East,P003,Product stopped working after a week.,negative,packaging
+2026-02-11,C00248,West,P004,Fast setup and easy to use.,positive,product_quality
+2026-02-11,C00249,West,P004,Product stopped working after a week.,negative,customer_support
+2026-02-11,C00250,West,P004,Really happy with the product quality.,positive,product_quality
+2026-02-12,C00251,North,P002,Great value for the price.,positive,product_quality
+2026-02-12,C00252,East,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-12,C00253,West,P002,Great value for the price.,positive,product_quality
+2026-02-12,C00254,West,P002,Great value for the price.,positive,product_quality
+2026-02-13,C00255,North,P001,Great value for the price.,positive,product_quality
+2026-02-13,C00256,North,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-13,C00257,North,P003,Packaging could be better.,neutral,customer_support
+2026-02-13,C00258,North,P004,Packaging could be better.,neutral,product_quality
+2026-02-13,C00259,South,P002,Packaging could be better.,neutral,customer_support
+2026-02-13,C00260,South,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-13,C00261,East,P002,Product stopped working after a week.,negative,pricing
+2026-02-13,C00262,West,P003,Packaging could be better.,neutral,product_quality
+2026-02-13,C00263,West,P003,Customer support was slow to respond.,negative,pricing
+2026-02-14,C00264,North,P003,"It's okay, does what it says.",neutral,packaging
+2026-02-14,C00265,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-02-14,C00266,East,P004,Packaging could be better.,neutral,packaging
+2026-02-14,C00267,West,P002,"It's okay, does what it says.",neutral,packaging
+2026-02-15,C00268,North,P003,Product stopped working after a week.,negative,product_quality
+2026-02-15,C00269,North,P002,Customer support was slow to respond.,negative,packaging
+2026-02-15,C00270,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-02-16,C00271,North,P003,Great value for the price.,positive,product_quality
+2026-02-16,C00272,North,P003,Great value for the price.,positive,product_quality
+2026-02-16,C00273,South,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-16,C00274,East,P001,Really happy with the product quality.,positive,product_quality
+2026-02-17,C00275,North,P002,Packaging could be better.,neutral,pricing
+2026-02-17,C00276,North,P004,"Average experience, nothing special.",neutral,product_quality
+2026-02-17,C00277,North,P004,Packaging could be better.,neutral,customer_support
+2026-02-17,C00278,South,P004,"It's okay, does what it says.",neutral,customer_support
+2026-02-17,C00279,South,P004,Product stopped working after a week.,negative,pricing
+2026-02-17,C00280,South,P004,Great value for the price.,positive,product_quality
+2026-02-17,C00281,East,P003,Fast setup and easy to use.,positive,product_quality
+2026-02-17,C00282,East,P001,Product stopped working after a week.,negative,customer_support
+2026-02-17,C00283,West,P003,Great value for the price.,positive,product_quality
+2026-02-18,C00284,North,P001,Great value for the price.,positive,product_quality
+2026-02-18,C00285,East,P003,"It's okay, does what it says.",neutral,customer_support
+2026-02-18,C00286,East,P003,Packaging could be better.,neutral,customer_support
+2026-02-18,C00287,West,P001,"Average experience, nothing special.",neutral,packaging
+2026-02-18,C00288,West,P001,Packaging could be better.,neutral,product_quality
+2026-02-19,C00289,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-02-19,C00290,South,P003,"It's okay, does what it says.",neutral,pricing
+2026-02-19,C00291,South,P001,Great value for the price.,positive,product_quality
+2026-02-19,C00292,East,P001,"It's okay, does what it says.",neutral,customer_support
+2026-02-19,C00293,East,P003,Customer support was slow to respond.,negative,packaging
+2026-02-19,C00294,West,P002,Not as described on the listing.,negative,packaging
+2026-02-20,C00295,North,P001,Customer support was slow to respond.,negative,pricing
+2026-02-20,C00296,South,P004,Fast setup and easy to use.,positive,product_quality
+2026-02-20,C00297,East,P004,"Average experience, nothing special.",neutral,customer_support
+2026-02-21,C00298,North,P001,Great value for the price.,positive,product_quality
+2026-02-21,C00299,South,P001,"Average experience, nothing special.",neutral,pricing
+2026-02-21,C00300,East,P002,Fast setup and easy to use.,positive,product_quality
+2026-02-21,C00301,East,P002,Fast setup and easy to use.,positive,product_quality
+2026-02-21,C00302,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-02-21,C00303,West,P001,Product stopped working after a week.,negative,pricing
+2026-02-22,C00304,North,P004,Packaging could be better.,neutral,customer_support
+2026-02-22,C00305,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-02-22,C00306,South,P001,"Average experience, nothing special.",neutral,packaging
+2026-02-22,C00307,South,P001,"It's okay, does what it says.",neutral,customer_support
+2026-02-22,C00308,West,P004,Great value for the price.,positive,product_quality
+2026-02-22,C00309,West,P004,Fast setup and easy to use.,positive,product_quality
+2026-02-22,C00310,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-02-23,C00311,South,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-23,C00312,South,P002,Great value for the price.,positive,product_quality
+2026-02-23,C00313,South,P002,Fast setup and easy to use.,positive,product_quality
+2026-02-23,C00314,East,P002,Customer support was slow to respond.,negative,pricing
+2026-02-23,C00315,East,P002,Packaging could be better.,neutral,customer_support
+2026-02-23,C00316,West,P003,"It's okay, does what it says.",neutral,pricing
+2026-02-24,C00317,North,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-24,C00318,South,P002,Really happy with the product quality.,positive,product_quality
+2026-02-24,C00319,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-02-25,C00320,North,P003,Not as described on the listing.,negative,customer_support
+2026-02-25,C00321,North,P004,Great value for the price.,positive,product_quality
+2026-02-25,C00322,South,P003,"It's okay, does what it says.",neutral,product_quality
+2026-02-26,C00323,South,P002,Really happy with the product quality.,positive,product_quality
+2026-02-26,C00324,East,P002,Packaging could be better.,neutral,pricing
+2026-02-26,C00325,East,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-26,C00326,East,P003,Fast setup and easy to use.,positive,product_quality
+2026-02-26,C00327,East,P002,Fast setup and easy to use.,positive,product_quality
+2026-02-27,C00328,North,P003,Not as described on the listing.,negative,pricing
+2026-02-27,C00329,North,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-27,C00330,North,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-02-27,C00331,North,P004,Really happy with the product quality.,positive,product_quality
+2026-02-27,C00332,East,P001,Fast setup and easy to use.,positive,product_quality
+2026-02-27,C00333,East,P002,Fast setup and easy to use.,positive,product_quality
+2026-02-27,C00334,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-02-28,C00335,North,P003,"Average experience, nothing special.",neutral,pricing
+2026-02-28,C00336,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-03-01,C00337,North,P001,Really happy with the product quality.,positive,product_quality
+2026-03-01,C00338,North,P001,Great value for the price.,positive,product_quality
+2026-03-01,C00339,South,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-01,C00340,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-03-01,C00341,East,P001,Great value for the price.,positive,product_quality
+2026-03-01,C00342,West,P001,Product stopped working after a week.,negative,customer_support
+2026-03-02,C00343,South,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-02,C00344,South,P004,Really happy with the product quality.,positive,product_quality
+2026-03-02,C00345,East,P004,"Average experience, nothing special.",neutral,product_quality
+2026-03-02,C00346,East,P004,Really happy with the product quality.,positive,product_quality
+2026-03-02,C00347,West,P002,Really happy with the product quality.,positive,product_quality
+2026-03-02,C00348,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-03-03,C00349,North,P003,Product stopped working after a week.,negative,packaging
+2026-03-03,C00350,North,P003,"Average experience, nothing special.",neutral,customer_support
+2026-03-03,C00351,South,P002,Great value for the price.,positive,product_quality
+2026-03-03,C00352,East,P002,Customer support was slow to respond.,negative,customer_support
+2026-03-03,C00353,East,P003,Customer support was slow to respond.,negative,customer_support
+2026-03-03,C00354,East,P003,Fast setup and easy to use.,positive,product_quality
+2026-03-03,C00355,West,P003,Really happy with the product quality.,positive,product_quality
+2026-03-03,C00356,West,P001,Product stopped working after a week.,negative,packaging
+2026-03-03,C00357,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-03-04,C00358,North,P002,Great value for the price.,positive,product_quality
+2026-03-04,C00359,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-03-04,C00360,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-03-04,C00361,South,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-04,C00362,East,P004,Product stopped working after a week.,negative,pricing
+2026-03-04,C00363,East,P003,Product stopped working after a week.,negative,pricing
+2026-03-04,C00364,East,P004,Packaging could be better.,neutral,pricing
+2026-03-04,C00365,West,P003,"It's okay, does what it says.",neutral,pricing
+2026-03-04,C00366,West,P003,Not as described on the listing.,negative,packaging
+2026-03-05,C00367,East,P003,Fast setup and easy to use.,positive,product_quality
+2026-03-05,C00368,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-03-05,C00369,West,P001,"It's okay, does what it says.",neutral,customer_support
+2026-03-06,C00370,South,P004,Customer support was slow to respond.,negative,product_quality
+2026-03-06,C00371,South,P004,"It's okay, does what it says.",neutral,customer_support
+2026-03-06,C00372,East,P004,Great value for the price.,positive,product_quality
+2026-03-06,C00373,East,P004,Fast setup and easy to use.,positive,product_quality
+2026-03-06,C00374,East,P001,Really happy with the product quality.,positive,product_quality
+2026-03-06,C00375,East,P003,Customer support was slow to respond.,negative,packaging
+2026-03-07,C00376,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-03-07,C00377,South,P001,Packaging could be better.,neutral,customer_support
+2026-03-07,C00378,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-03-07,C00379,East,P002,"It's okay, does what it says.",neutral,customer_support
+2026-03-07,C00380,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-03-08,C00381,North,P001,Great value for the price.,positive,product_quality
+2026-03-08,C00382,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-03-08,C00383,South,P001,Great value for the price.,positive,product_quality
+2026-03-08,C00384,South,P002,Great value for the price.,positive,product_quality
+2026-03-08,C00385,South,P003,"It's okay, does what it says.",neutral,pricing
+2026-03-08,C00386,East,P002,Product stopped working after a week.,negative,packaging
+2026-03-08,C00387,West,P004,Great value for the price.,positive,product_quality
+2026-03-08,C00388,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-03-08,C00389,West,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-09,C00390,North,P002,Fast setup and easy to use.,positive,product_quality
+2026-03-09,C00391,South,P004,Really happy with the product quality.,positive,product_quality
+2026-03-09,C00392,South,P002,Fast setup and easy to use.,positive,product_quality
+2026-03-09,C00393,East,P003,Really happy with the product quality.,positive,product_quality
+2026-03-09,C00394,East,P001,Fast setup and easy to use.,positive,product_quality
+2026-03-09,C00395,East,P003,Not as described on the listing.,negative,customer_support
+2026-03-09,C00396,West,P001,Really happy with the product quality.,positive,product_quality
+2026-03-10,C00397,North,P004,Customer support was slow to respond.,negative,product_quality
+2026-03-10,C00398,North,P004,Packaging could be better.,neutral,product_quality
+2026-03-10,C00399,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-03-10,C00400,South,P002,Fast setup and easy to use.,positive,product_quality
+2026-03-10,C00401,East,P001,Really happy with the product quality.,positive,product_quality
+2026-03-10,C00402,East,P001,"It's okay, does what it says.",neutral,pricing
+2026-03-10,C00403,West,P003,Customer support was slow to respond.,negative,pricing
+2026-03-10,C00404,West,P001,Product stopped working after a week.,negative,packaging
+2026-03-11,C00405,South,P002,Customer support was slow to respond.,negative,pricing
+2026-03-11,C00406,East,P004,Product stopped working after a week.,negative,customer_support
+2026-03-11,C00407,East,P004,Really happy with the product quality.,positive,product_quality
+2026-03-11,C00408,East,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-11,C00409,West,P004,Product stopped working after a week.,negative,packaging
+2026-03-12,C00410,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-03-12,C00411,East,P003,"Average experience, nothing special.",neutral,pricing
+2026-03-12,C00412,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-03-12,C00413,West,P004,"It's okay, does what it says.",neutral,customer_support
+2026-03-13,C00414,North,P002,"It's okay, does what it says.",neutral,customer_support
+2026-03-13,C00415,South,P002,Packaging could be better.,neutral,customer_support
+2026-03-13,C00416,East,P003,Great value for the price.,positive,product_quality
+2026-03-14,C00417,North,P003,Fast setup and easy to use.,positive,product_quality
+2026-03-14,C00418,North,P001,Customer support was slow to respond.,negative,customer_support
+2026-03-14,C00419,North,P001,"It's okay, does what it says.",neutral,customer_support
+2026-03-14,C00420,South,P002,Customer support was slow to respond.,negative,pricing
+2026-03-14,C00421,South,P001,Customer support was slow to respond.,negative,packaging
+2026-03-14,C00422,East,P002,"It's okay, does what it says.",neutral,packaging
+2026-03-14,C00423,West,P003,Really happy with the product quality.,positive,product_quality
+2026-03-15,C00424,North,P002,Really happy with the product quality.,positive,product_quality
+2026-03-15,C00425,South,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-15,C00426,South,P002,Really happy with the product quality.,positive,product_quality
+2026-03-16,C00427,South,P001,Packaging could be better.,neutral,customer_support
+2026-03-16,C00428,South,P004,Really happy with the product quality.,positive,product_quality
+2026-03-16,C00429,East,P004,Customer support was slow to respond.,negative,pricing
+2026-03-16,C00430,East,P002,Really happy with the product quality.,positive,product_quality
+2026-03-16,C00431,East,P002,Fast setup and easy to use.,positive,product_quality
+2026-03-16,C00432,West,P003,Great value for the price.,positive,product_quality
+2026-03-16,C00433,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-03-16,C00434,West,P003,Really happy with the product quality.,positive,product_quality
+2026-03-17,C00435,South,P003,Customer support was slow to respond.,negative,product_quality
+2026-03-17,C00436,West,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-17,C00437,West,P003,Not as described on the listing.,negative,customer_support
+2026-03-17,C00438,West,P002,Great value for the price.,positive,product_quality
+2026-03-18,C00439,North,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-18,C00440,North,P004,"Average experience, nothing special.",neutral,customer_support
+2026-03-18,C00441,East,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-18,C00442,East,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-18,C00443,West,P004,"It's okay, does what it says.",neutral,product_quality
+2026-03-19,C00444,South,P001,"It's okay, does what it says.",neutral,packaging
+2026-03-19,C00445,East,P001,Great value for the price.,positive,product_quality
+2026-03-19,C00446,East,P004,Really happy with the product quality.,positive,product_quality
+2026-03-19,C00447,West,P002,Great value for the price.,positive,product_quality
+2026-03-20,C00448,North,P003,Fast setup and easy to use.,positive,product_quality
+2026-03-20,C00449,North,P001,Fast setup and easy to use.,positive,product_quality
+2026-03-20,C00450,South,P003,Packaging could be better.,neutral,product_quality
+2026-03-20,C00451,South,P001,Customer support was slow to respond.,negative,customer_support
+2026-03-20,C00452,East,P004,Really happy with the product quality.,positive,product_quality
+2026-03-21,C00453,North,P004,Product stopped working after a week.,negative,customer_support
+2026-03-21,C00454,North,P001,Customer support was slow to respond.,negative,pricing
+2026-03-21,C00455,North,P002,Really happy with the product quality.,positive,product_quality
+2026-03-21,C00456,South,P004,"It's okay, does what it says.",neutral,product_quality
+2026-03-21,C00457,West,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-22,C00458,North,P002,Product stopped working after a week.,negative,packaging
+2026-03-22,C00459,North,P002,Product stopped working after a week.,negative,packaging
+2026-03-22,C00460,South,P001,"It's okay, does what it says.",neutral,product_quality
+2026-03-22,C00461,East,P003,Really happy with the product quality.,positive,product_quality
+2026-03-23,C00462,North,P002,Fast setup and easy to use.,positive,product_quality
+2026-03-23,C00463,North,P002,Product stopped working after a week.,negative,product_quality
+2026-03-23,C00464,North,P001,"Average experience, nothing special.",neutral,product_quality
+2026-03-23,C00465,North,P001,Really happy with the product quality.,positive,product_quality
+2026-03-23,C00466,South,P001,Customer support was slow to respond.,negative,pricing
+2026-03-23,C00467,West,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-23,C00468,West,P001,Customer support was slow to respond.,negative,customer_support
+2026-03-23,C00469,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-03-23,C00470,West,P004,"It's okay, does what it says.",neutral,pricing
+2026-03-23,C00471,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-03-24,C00472,North,P002,"It's okay, does what it says.",neutral,pricing
+2026-03-24,C00473,North,P004,Great value for the price.,positive,product_quality
+2026-03-24,C00474,North,P001,Customer support was slow to respond.,negative,customer_support
+2026-03-24,C00475,South,P004,"It's okay, does what it says.",neutral,pricing
+2026-03-24,C00476,East,P003,Product stopped working after a week.,negative,pricing
+2026-03-24,C00477,West,P001,Really happy with the product quality.,positive,product_quality
+2026-03-25,C00478,South,P002,Great value for the price.,positive,product_quality
+2026-03-25,C00479,South,P004,Fast setup and easy to use.,positive,product_quality
+2026-03-25,C00480,South,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-25,C00481,West,P001,Product stopped working after a week.,negative,product_quality
+2026-03-26,C00482,North,P001,Customer support was slow to respond.,negative,pricing
+2026-03-26,C00483,East,P004,"It's okay, does what it says.",neutral,customer_support
+2026-03-26,C00484,East,P002,Great value for the price.,positive,product_quality
+2026-03-26,C00485,West,P001,Packaging could be better.,neutral,pricing
+2026-03-26,C00486,West,P003,Great value for the price.,positive,product_quality
+2026-03-26,C00487,West,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-26,C00488,West,P004,Customer support was slow to respond.,negative,customer_support
+2026-03-27,C00489,South,P002,"It's okay, does what it says.",neutral,pricing
+2026-03-27,C00490,East,P003,Great value for the price.,positive,product_quality
+2026-03-28,C00491,North,P001,Fast setup and easy to use.,positive,product_quality
+2026-03-28,C00492,North,P002,Product stopped working after a week.,negative,pricing
+2026-03-28,C00493,East,P004,Great value for the price.,positive,product_quality
+2026-03-28,C00494,East,P001,Packaging could be better.,neutral,packaging
+2026-03-28,C00495,West,P003,Really happy with the product quality.,positive,product_quality
+2026-03-29,C00496,North,P002,Great value for the price.,positive,product_quality
+2026-03-29,C00497,South,P002,Packaging could be better.,neutral,customer_support
+2026-03-29,C00498,South,P003,Packaging could be better.,neutral,customer_support
+2026-03-29,C00499,South,P002,Really happy with the product quality.,positive,product_quality
+2026-03-29,C00500,East,P002,"Average experience, nothing special.",neutral,packaging
+2026-03-29,C00501,West,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-03-29,C00502,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-03-29,C00503,West,P004,Great value for the price.,positive,product_quality
+2026-03-30,C00504,North,P004,Product stopped working after a week.,negative,product_quality
+2026-03-30,C00505,South,P001,"It's okay, does what it says.",neutral,product_quality
+2026-03-30,C00506,South,P001,Not as described on the listing.,negative,product_quality
+2026-03-30,C00507,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-03-31,C00508,South,P004,Really happy with the product quality.,positive,product_quality
+2026-03-31,C00509,South,P003,"Average experience, nothing special.",neutral,pricing
+2026-03-31,C00510,East,P003,"It's okay, does what it says.",neutral,packaging
+2026-03-31,C00511,West,P004,Great value for the price.,positive,product_quality
+2026-03-31,C00512,West,P002,Great value for the price.,positive,product_quality
+2026-04-01,C00513,North,P003,"It's okay, does what it says.",neutral,product_quality
+2026-04-01,C00514,South,P004,Fast setup and easy to use.,positive,product_quality
+2026-04-01,C00515,East,P002,"It's okay, does what it says.",neutral,pricing
+2026-04-01,C00516,East,P003,Great value for the price.,positive,product_quality
+2026-04-01,C00517,West,P003,Great value for the price.,positive,product_quality
+2026-04-01,C00518,West,P002,Customer support was slow to respond.,negative,product_quality
+2026-04-02,C00519,North,P004,Really happy with the product quality.,positive,product_quality
+2026-04-02,C00520,North,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-02,C00521,South,P002,Product stopped working after a week.,negative,product_quality
+2026-04-02,C00522,East,P004,"Average experience, nothing special.",neutral,customer_support
+2026-04-02,C00523,East,P004,Fast setup and easy to use.,positive,product_quality
+2026-04-02,C00524,East,P001,"It's okay, does what it says.",neutral,customer_support
+2026-04-02,C00525,West,P001,Great value for the price.,positive,product_quality
+2026-04-02,C00526,West,P002,"Average experience, nothing special.",neutral,packaging
+2026-04-02,C00527,West,P004,Fast setup and easy to use.,positive,product_quality
+2026-04-02,C00528,West,P002,Product stopped working after a week.,negative,packaging
+2026-04-02,C00529,West,P004,Great value for the price.,positive,product_quality
+2026-04-03,C00530,East,P002,"Average experience, nothing special.",neutral,customer_support
+2026-04-03,C00531,West,P003,Product stopped working after a week.,negative,product_quality
+2026-04-04,C00532,North,P004,Customer support was slow to respond.,negative,pricing
+2026-04-04,C00533,North,P001,Great value for the price.,positive,product_quality
+2026-04-04,C00534,South,P002,"It's okay, does what it says.",neutral,product_quality
+2026-04-04,C00535,South,P002,Customer support was slow to respond.,negative,packaging
+2026-04-04,C00536,South,P002,Not as described on the listing.,negative,packaging
+2026-04-04,C00537,South,P004,"It's okay, does what it says.",neutral,product_quality
+2026-04-04,C00538,East,P004,Not as described on the listing.,negative,product_quality
+2026-04-04,C00539,West,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-04,C00540,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-05,C00541,North,P001,"Average experience, nothing special.",neutral,packaging
+2026-04-05,C00542,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-04-05,C00543,South,P002,Great value for the price.,positive,product_quality
+2026-04-05,C00544,South,P003,Customer support was slow to respond.,negative,packaging
+2026-04-05,C00545,South,P004,Not as described on the listing.,negative,pricing
+2026-04-05,C00546,South,P001,Great value for the price.,positive,product_quality
+2026-04-05,C00547,East,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-05,C00548,East,P003,"Average experience, nothing special.",neutral,pricing
+2026-04-05,C00549,East,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-05,C00550,West,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-05,C00551,West,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-06,C00552,North,P002,Not as described on the listing.,negative,pricing
+2026-04-06,C00553,South,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-06,C00554,East,P001,"It's okay, does what it says.",neutral,packaging
+2026-04-06,C00555,East,P002,Product stopped working after a week.,negative,pricing
+2026-04-06,C00556,East,P001,Not as described on the listing.,negative,product_quality
+2026-04-06,C00557,East,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-06,C00558,West,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-06,C00559,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-04-07,C00560,North,P004,"Average experience, nothing special.",neutral,pricing
+2026-04-07,C00561,North,P001,"It's okay, does what it says.",neutral,product_quality
+2026-04-07,C00562,North,P001,"Average experience, nothing special.",neutral,packaging
+2026-04-07,C00563,North,P003,Great value for the price.,positive,product_quality
+2026-04-07,C00564,North,P004,Packaging could be better.,neutral,packaging
+2026-04-07,C00565,South,P002,Really happy with the product quality.,positive,product_quality
+2026-04-07,C00566,East,P004,Fast setup and easy to use.,positive,product_quality
+2026-04-07,C00567,East,P002,Fast setup and easy to use.,positive,product_quality
+2026-04-07,C00568,West,P004,"Average experience, nothing special.",neutral,customer_support
+2026-04-08,C00569,North,P002,"Average experience, nothing special.",neutral,customer_support
+2026-04-08,C00570,North,P004,Packaging could be better.,neutral,packaging
+2026-04-08,C00571,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-08,C00572,South,P003,Really happy with the product quality.,positive,product_quality
+2026-04-08,C00573,South,P004,Customer support was slow to respond.,negative,product_quality
+2026-04-08,C00574,East,P002,Product stopped working after a week.,negative,product_quality
+2026-04-08,C00575,East,P002,Really happy with the product quality.,positive,product_quality
+2026-04-08,C00576,West,P001,Not as described on the listing.,negative,customer_support
+2026-04-08,C00577,West,P003,Customer support was slow to respond.,negative,packaging
+2026-04-08,C00578,West,P004,Really happy with the product quality.,positive,product_quality
+2026-04-09,C00579,North,P003,Not as described on the listing.,negative,packaging
+2026-04-09,C00580,North,P001,Really happy with the product quality.,positive,product_quality
+2026-04-09,C00581,North,P003,Really happy with the product quality.,positive,product_quality
+2026-04-09,C00582,South,P002,Fast setup and easy to use.,positive,product_quality
+2026-04-09,C00583,East,P001,Really happy with the product quality.,positive,product_quality
+2026-04-09,C00584,East,P004,Not as described on the listing.,negative,pricing
+2026-04-09,C00585,East,P003,Packaging could be better.,neutral,pricing
+2026-04-09,C00586,East,P002,Customer support was slow to respond.,negative,product_quality
+2026-04-09,C00587,East,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-09,C00588,East,P003,Great value for the price.,positive,product_quality
+2026-04-09,C00589,West,P003,Really happy with the product quality.,positive,product_quality
+2026-04-09,C00590,West,P001,Really happy with the product quality.,positive,product_quality
+2026-04-10,C00591,North,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-10,C00592,North,P003,Really happy with the product quality.,positive,product_quality
+2026-04-10,C00593,North,P002,Fast setup and easy to use.,positive,product_quality
+2026-04-10,C00594,South,P004,Packaging could be better.,neutral,pricing
+2026-04-10,C00595,West,P004,Product stopped working after a week.,negative,product_quality
+2026-04-11,C00596,North,P001,"Average experience, nothing special.",neutral,customer_support
+2026-04-11,C00597,South,P002,"Average experience, nothing special.",neutral,product_quality
+2026-04-11,C00598,South,P002,Fast setup and easy to use.,positive,product_quality
+2026-04-11,C00599,South,P004,Great value for the price.,positive,product_quality
+2026-04-11,C00600,East,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-11,C00601,East,P003,Great value for the price.,positive,product_quality
+2026-04-11,C00602,East,P003,Really happy with the product quality.,positive,product_quality
+2026-04-12,C00603,North,P001,"Average experience, nothing special.",neutral,product_quality
+2026-04-12,C00604,East,P001,Product stopped working after a week.,negative,pricing
+2026-04-12,C00605,West,P003,Really happy with the product quality.,positive,product_quality
+2026-04-13,C00606,North,P004,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-13,C00607,North,P002,Order took way longer than expected to arrive.,negative,delivery
+2026-04-13,C00608,North,P003,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-13,C00609,North,P003,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-13,C00610,North,P002,Fast setup and easy to use.,positive,product_quality
+2026-04-13,C00611,North,P004,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-13,C00612,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-13,C00613,East,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-13,C00614,East,P001,Product stopped working after a week.,negative,pricing
+2026-04-13,C00615,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-04-13,C00616,West,P002,Great value for the price.,positive,product_quality
+2026-04-14,C00617,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-04-14,C00618,North,P004,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-14,C00619,North,P003,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-14,C00620,South,P001,Great value for the price.,positive,product_quality
+2026-04-14,C00621,West,P004,Product stopped working after a week.,negative,customer_support
+2026-04-14,C00622,West,P003,Customer support was slow to respond.,negative,customer_support
+2026-04-14,C00623,West,P002,Customer support was slow to respond.,negative,packaging
+2026-04-15,C00624,North,P003,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-15,C00625,North,P003,Order took way longer than expected to arrive.,negative,delivery
+2026-04-15,C00626,North,P004,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-15,C00627,North,P001,Order took way longer than expected to arrive.,negative,delivery
+2026-04-15,C00628,North,P004,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-15,C00629,North,P002,Order took way longer than expected to arrive.,negative,delivery
+2026-04-15,C00630,South,P004,Fast setup and easy to use.,positive,product_quality
+2026-04-15,C00631,South,P004,Customer support was slow to respond.,negative,pricing
+2026-04-15,C00632,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-04-15,C00633,South,P003,Great value for the price.,positive,product_quality
+2026-04-15,C00634,East,P003,Not as described on the listing.,negative,pricing
+2026-04-15,C00635,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-15,C00636,West,P002,Really happy with the product quality.,positive,product_quality
+2026-04-16,C00637,North,P002,Order took way longer than expected to arrive.,negative,delivery
+2026-04-16,C00638,North,P003,Order took way longer than expected to arrive.,negative,delivery
+2026-04-16,C00639,North,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-16,C00640,North,P002,Order took way longer than expected to arrive.,negative,delivery
+2026-04-16,C00641,South,P003,Product stopped working after a week.,negative,product_quality
+2026-04-16,C00642,West,P003,Really happy with the product quality.,positive,product_quality
+2026-04-16,C00643,West,P002,"Average experience, nothing special.",neutral,packaging
+2026-04-17,C00644,North,P002,Customer support was slow to respond.,negative,customer_support
+2026-04-17,C00645,North,P001,Product stopped working after a week.,negative,customer_support
+2026-04-17,C00646,North,P001,Order took way longer than expected to arrive.,negative,delivery
+2026-04-17,C00647,North,P001,Customer support was slow to respond.,negative,product_quality
+2026-04-17,C00648,South,P004,Packaging could be better.,neutral,product_quality
+2026-04-17,C00649,South,P004,Product stopped working after a week.,negative,product_quality
+2026-04-17,C00650,East,P002,Customer support was slow to respond.,negative,product_quality
+2026-04-18,C00651,North,P002,"It's okay, does what it says.",neutral,packaging
+2026-04-18,C00652,North,P004,Order took way longer than expected to arrive.,negative,delivery
+2026-04-18,C00653,North,P003,Order took way longer than expected to arrive.,negative,delivery
+2026-04-18,C00654,North,P003,Order took way longer than expected to arrive.,negative,delivery
+2026-04-18,C00655,North,P004,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-18,C00656,North,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-18,C00657,North,P001,Not as described on the listing.,negative,packaging
+2026-04-18,C00658,South,P001,Great value for the price.,positive,product_quality
+2026-04-18,C00659,West,P001,Customer support was slow to respond.,negative,packaging
+2026-04-18,C00660,West,P004,Really happy with the product quality.,positive,product_quality
+2026-04-19,C00661,North,P004,Order took way longer than expected to arrive.,negative,delivery
+2026-04-19,C00662,North,P003,Not as described on the listing.,negative,customer_support
+2026-04-19,C00663,North,P001,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-19,C00664,North,P001,"Average experience, nothing special.",neutral,customer_support
+2026-04-19,C00665,North,P003,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-19,C00666,North,P001,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-19,C00667,North,P003,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-19,C00668,North,P003,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-19,C00669,North,P003,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-19,C00670,South,P003,Great value for the price.,positive,product_quality
+2026-04-19,C00671,South,P003,Great value for the price.,positive,product_quality
+2026-04-20,C00672,North,P004,Not as described on the listing.,negative,pricing
+2026-04-20,C00673,North,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-20,C00674,North,P004,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-20,C00675,North,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-20,C00676,North,P004,Order took way longer than expected to arrive.,negative,delivery
+2026-04-20,C00677,North,P001,Great value for the price.,positive,product_quality
+2026-04-20,C00678,North,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-20,C00679,North,P002,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-20,C00680,North,P003,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-20,C00681,South,P002,"Average experience, nothing special.",neutral,customer_support
+2026-04-21,C00682,North,P003,Fast setup and easy to use.,positive,product_quality
+2026-04-21,C00683,North,P003,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-21,C00684,North,P002,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-21,C00685,North,P004,Product stopped working after a week.,negative,packaging
+2026-04-21,C00686,East,P004,Really happy with the product quality.,positive,product_quality
+2026-04-21,C00687,West,P001,Customer support was slow to respond.,negative,pricing
+2026-04-21,C00688,West,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-22,C00689,North,P003,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-22,C00690,North,P004,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-22,C00691,North,P004,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-22,C00692,North,P004,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-22,C00693,North,P004,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-22,C00694,South,P003,"It's okay, does what it says.",neutral,packaging
+2026-04-22,C00695,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-04-22,C00696,East,P004,Customer support was slow to respond.,negative,customer_support
+2026-04-22,C00697,East,P003,Great value for the price.,positive,product_quality
+2026-04-22,C00698,East,P001,Product stopped working after a week.,negative,pricing
+2026-04-22,C00699,East,P003,Fast setup and easy to use.,positive,product_quality
+2026-04-22,C00700,East,P003,Really happy with the product quality.,positive,product_quality
+2026-04-22,C00701,West,P002,Really happy with the product quality.,positive,product_quality
+2026-04-22,C00702,West,P002,Packaging could be better.,neutral,pricing
+2026-04-23,C00703,North,P001,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-23,C00704,North,P001,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-23,C00705,North,P002,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-23,C00706,North,P001,Product stopped working after a week.,negative,pricing
+2026-04-23,C00707,North,P002,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-23,C00708,South,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-23,C00709,South,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-23,C00710,East,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-23,C00711,West,P004,Fast setup and easy to use.,positive,product_quality
+2026-04-24,C00712,North,P002,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-24,C00713,North,P001,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-24,C00714,North,P004,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-24,C00715,North,P004,Order took way longer than expected to arrive.,negative,delivery
+2026-04-24,C00716,North,P002,Order took way longer than expected to arrive.,negative,delivery
+2026-04-24,C00717,North,P001,Order took way longer than expected to arrive.,negative,delivery
+2026-04-24,C00718,North,P003,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-24,C00719,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-04-24,C00720,East,P004,"Average experience, nothing special.",neutral,packaging
+2026-04-24,C00721,West,P004,"It's okay, does what it says.",neutral,packaging
+2026-04-24,C00722,West,P002,Great value for the price.,positive,product_quality
+2026-04-25,C00723,North,P002,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-25,C00724,North,P002,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-25,C00725,North,P004,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-25,C00726,North,P003,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-25,C00727,North,P003,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-25,C00728,North,P002,Order took way longer than expected to arrive.,negative,delivery
+2026-04-25,C00729,North,P001,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-25,C00730,North,P004,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-25,C00731,South,P004,"Average experience, nothing special.",neutral,product_quality
+2026-04-25,C00732,East,P004,Product stopped working after a week.,negative,pricing
+2026-04-25,C00733,East,P001,Product stopped working after a week.,negative,customer_support
+2026-04-25,C00734,West,P001,Really happy with the product quality.,positive,product_quality
+2026-04-25,C00735,West,P002,"Average experience, nothing special.",neutral,packaging
+2026-04-26,C00736,North,P001,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-26,C00737,North,P002,Packaging could be better.,neutral,packaging
+2026-04-26,C00738,North,P003,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-26,C00739,North,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-26,C00740,North,P001,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-26,C00741,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-04-26,C00742,North,P001,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-26,C00743,North,P003,Packaging could be better.,neutral,packaging
+2026-04-26,C00744,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-26,C00745,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-26,C00746,South,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-26,C00747,South,P002,Packaging could be better.,neutral,pricing
+2026-04-26,C00748,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-26,C00749,East,P004,"Average experience, nothing special.",neutral,product_quality
+2026-04-26,C00750,West,P002,Great value for the price.,positive,product_quality
+2026-04-26,C00751,West,P001,Great value for the price.,positive,product_quality
+2026-04-27,C00752,North,P001,Great value for the price.,positive,product_quality
+2026-04-27,C00753,North,P002,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-27,C00754,North,P001,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-27,C00755,North,P001,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-27,C00756,North,P003,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-04-27,C00757,North,P004,Really happy with the product quality.,positive,product_quality
+2026-04-27,C00758,North,P001,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-27,C00759,North,P004,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-27,C00760,South,P001,Customer support was slow to respond.,negative,pricing
+2026-04-27,C00761,South,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-27,C00762,East,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-27,C00763,West,P003,Really happy with the product quality.,positive,product_quality
+2026-04-27,C00764,West,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-27,C00765,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-04-27,C00766,West,P003,Really happy with the product quality.,positive,product_quality
+2026-04-28,C00767,North,P003,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-04-28,C00768,North,P002,Really happy with the product quality.,positive,product_quality
+2026-04-28,C00769,North,P002,Order took way longer than expected to arrive.,negative,delivery
+2026-04-28,C00770,North,P001,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-28,C00771,North,P002,Fast setup and easy to use.,positive,product_quality
+2026-04-28,C00772,South,P002,Product stopped working after a week.,negative,customer_support
+2026-04-28,C00773,South,P004,Fast setup and easy to use.,positive,product_quality
+2026-04-28,C00774,East,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-28,C00775,West,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-29,C00776,North,P004,Order took way longer than expected to arrive.,negative,delivery
+2026-04-29,C00777,North,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-29,C00778,North,P001,Really happy with the product quality.,positive,product_quality
+2026-04-29,C00779,East,P002,Packaging could be better.,neutral,customer_support
+2026-04-29,C00780,East,P002,"It's okay, does what it says.",neutral,customer_support
+2026-04-29,C00781,West,P003,Great value for the price.,positive,product_quality
+2026-04-29,C00782,West,P003,Great value for the price.,positive,product_quality
+2026-04-30,C00783,North,P003,Delivery was delayed by several days with no update.,negative,delivery
+2026-04-30,C00784,East,P001,Product stopped working after a week.,negative,pricing
+2026-04-30,C00785,East,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-04-30,C00786,West,P001,"Average experience, nothing special.",neutral,customer_support
+2026-05-01,C00787,North,P002,Great value for the price.,positive,product_quality
+2026-05-01,C00788,North,P001,Delivery was delayed by several days with no update.,negative,delivery
+2026-05-01,C00789,North,P002,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-01,C00790,North,P004,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-01,C00791,North,P003,Order took way longer than expected to arrive.,negative,delivery
+2026-05-01,C00792,North,P001,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-01,C00793,North,P003,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-01,C00794,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-05-01,C00795,South,P003,Customer support was slow to respond.,negative,product_quality
+2026-05-01,C00796,East,P001,"Average experience, nothing special.",neutral,pricing
+2026-05-01,C00797,East,P002,"Average experience, nothing special.",neutral,product_quality
+2026-05-01,C00798,West,P002,Packaging could be better.,neutral,customer_support
+2026-05-01,C00799,West,P001,"Average experience, nothing special.",neutral,packaging
+2026-05-02,C00800,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-05-02,C00801,North,P002,Order took way longer than expected to arrive.,negative,delivery
+2026-05-02,C00802,North,P004,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-02,C00803,South,P004,"Average experience, nothing special.",neutral,pricing
+2026-05-02,C00804,West,P003,Great value for the price.,positive,product_quality
+2026-05-02,C00805,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-05-03,C00806,North,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-03,C00807,North,P004,Great value for the price.,positive,product_quality
+2026-05-03,C00808,North,P003,Order took way longer than expected to arrive.,negative,delivery
+2026-05-03,C00809,North,P002,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-03,C00810,North,P004,Delivery was delayed by several days with no update.,negative,delivery
+2026-05-03,C00811,North,P004,Customer support was slow to respond.,negative,packaging
+2026-05-03,C00812,South,P004,Great value for the price.,positive,product_quality
+2026-05-03,C00813,South,P001,"Average experience, nothing special.",neutral,packaging
+2026-05-03,C00814,South,P003,Great value for the price.,positive,product_quality
+2026-05-03,C00815,East,P003,Great value for the price.,positive,product_quality
+2026-05-03,C00816,East,P002,Fast setup and easy to use.,positive,product_quality
+2026-05-03,C00817,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-05-03,C00818,West,P004,Product stopped working after a week.,negative,product_quality
+2026-05-03,C00819,West,P004,Great value for the price.,positive,product_quality
+2026-05-04,C00820,North,P003,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-04,C00821,North,P002,Great value for the price.,positive,product_quality
+2026-05-04,C00822,North,P001,Order took way longer than expected to arrive.,negative,delivery
+2026-05-04,C00823,North,P002,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-04,C00824,North,P001,Order took way longer than expected to arrive.,negative,delivery
+2026-05-04,C00825,North,P001,Order took way longer than expected to arrive.,negative,delivery
+2026-05-04,C00826,North,P003,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-04,C00827,South,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-04,C00828,South,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-04,C00829,South,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-04,C00830,East,P004,"Average experience, nothing special.",neutral,packaging
+2026-05-04,C00831,West,P001,Customer support was slow to respond.,negative,packaging
+2026-05-04,C00832,West,P001,Customer support was slow to respond.,negative,customer_support
+2026-05-05,C00833,North,P003,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-05,C00834,North,P003,Order took way longer than expected to arrive.,negative,delivery
+2026-05-05,C00835,North,P004,Delivery was delayed by several days with no update.,negative,delivery
+2026-05-05,C00836,North,P002,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-05,C00837,North,P001,Not as described on the listing.,negative,customer_support
+2026-05-05,C00838,North,P004,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-05,C00839,North,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-05,C00840,South,P002,Product stopped working after a week.,negative,customer_support
+2026-05-05,C00841,East,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-05,C00842,West,P002,Packaging could be better.,neutral,customer_support
+2026-05-05,C00843,West,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-06,C00844,North,P002,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-06,C00845,North,P002,Delivery was delayed by several days with no update.,negative,delivery
+2026-05-06,C00846,North,P002,Order took way longer than expected to arrive.,negative,delivery
+2026-05-06,C00847,North,P003,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-06,C00848,North,P001,"Average experience, nothing special.",neutral,pricing
+2026-05-06,C00849,South,P001,Really happy with the product quality.,positive,product_quality
+2026-05-07,C00850,North,P003,Fast setup and easy to use.,positive,product_quality
+2026-05-07,C00851,North,P002,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-07,C00852,North,P001,Order took way longer than expected to arrive.,negative,delivery
+2026-05-07,C00853,North,P004,Customer support was slow to respond.,negative,product_quality
+2026-05-07,C00854,North,P004,Delivery was delayed by several days with no update.,negative,delivery
+2026-05-07,C00855,East,P002,Really happy with the product quality.,positive,product_quality
+2026-05-07,C00856,East,P004,Fast setup and easy to use.,positive,product_quality
+2026-05-07,C00857,West,P002,Packaging could be better.,neutral,pricing
+2026-05-07,C00858,West,P004,Really happy with the product quality.,positive,product_quality
+2026-05-08,C00859,West,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-08,C00860,West,P001,Product stopped working after a week.,negative,packaging
+2026-05-08,C00861,West,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-08,C00862,West,P001,Packaging could be better.,neutral,customer_support
+2026-05-08,C00863,West,P004,Packaging could be better.,neutral,packaging
+2026-05-08,C00864,West,P003,Product stopped working after a week.,negative,product_quality
+2026-05-09,C00865,North,P003,Customer support was slow to respond.,negative,packaging
+2026-05-09,C00866,North,P003,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-09,C00867,North,P004,Order took way longer than expected to arrive.,negative,delivery
+2026-05-09,C00868,North,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-09,C00869,North,P002,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-09,C00870,North,P003,"It's okay, does what it says.",neutral,pricing
+2026-05-09,C00871,South,P003,Really happy with the product quality.,positive,product_quality
+2026-05-09,C00872,East,P003,Product stopped working after a week.,negative,customer_support
+2026-05-09,C00873,East,P004,"It's okay, does what it says.",neutral,product_quality
+2026-05-09,C00874,East,P004,Customer support was slow to respond.,negative,packaging
+2026-05-10,C00875,North,P001,Order took way longer than expected to arrive.,negative,delivery
+2026-05-10,C00876,North,P003,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-10,C00877,South,P003,Packaging could be better.,neutral,customer_support
+2026-05-10,C00878,West,P002,"Average experience, nothing special.",neutral,product_quality
+2026-05-10,C00879,West,P001,Really happy with the product quality.,positive,product_quality
+2026-05-11,C00880,North,P004,"It's okay, does what it says.",neutral,product_quality
+2026-05-11,C00881,North,P004,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-11,C00882,North,P004,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-11,C00883,North,P003,Delivery was delayed by several days with no update.,negative,delivery
+2026-05-11,C00884,North,P003,Delivery was delayed by several days with no update.,negative,delivery
+2026-05-11,C00885,North,P001,Great value for the price.,positive,product_quality
+2026-05-11,C00886,South,P001,Customer support was slow to respond.,negative,packaging
+2026-05-11,C00887,South,P002,"It's okay, does what it says.",neutral,product_quality
+2026-05-11,C00888,East,P003,Fast setup and easy to use.,positive,product_quality
+2026-05-11,C00889,East,P003,Fast setup and easy to use.,positive,product_quality
+2026-05-11,C00890,East,P004,Great value for the price.,positive,product_quality
+2026-05-11,C00891,West,P001,Not as described on the listing.,negative,product_quality
+2026-05-11,C00892,West,P004,Really happy with the product quality.,positive,product_quality
+2026-05-12,C00893,North,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-12,C00894,North,P001,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-12,C00895,North,P001,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-12,C00896,North,P002,Delivery was delayed by several days with no update.,negative,delivery
+2026-05-12,C00897,North,P003,Order took way longer than expected to arrive.,negative,delivery
+2026-05-12,C00898,North,P003,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-12,C00899,East,P003,Great value for the price.,positive,product_quality
+2026-05-12,C00900,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-05-12,C00901,West,P003,Product stopped working after a week.,negative,pricing
+2026-05-13,C00902,North,P004,"It's okay, does what it says.",neutral,packaging
+2026-05-13,C00903,North,P001,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-13,C00904,North,P004,Delivery was delayed by several days with no update.,negative,delivery
+2026-05-13,C00905,North,P003,Fast setup and easy to use.,positive,product_quality
+2026-05-13,C00906,South,P003,Not as described on the listing.,negative,customer_support
+2026-05-13,C00907,South,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-13,C00908,South,P003,Really happy with the product quality.,positive,product_quality
+2026-05-13,C00909,West,P003,Not as described on the listing.,negative,customer_support
+2026-05-14,C00910,North,P001,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-14,C00911,North,P004,"Package arrived very late, missed the occasion it was for.",negative,delivery
+2026-05-14,C00912,North,P003,Really happy with the product quality.,positive,product_quality
+2026-05-14,C00913,North,P004,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-14,C00914,North,P004,"It's okay, does what it says.",neutral,pricing
+2026-05-14,C00915,North,P001,"Tracking showed no movement for days, delivery was delayed.",negative,delivery
+2026-05-14,C00916,South,P001,Really happy with the product quality.,positive,product_quality
+2026-05-14,C00917,East,P001,Great value for the price.,positive,product_quality
+2026-05-14,C00918,East,P001,Product stopped working after a week.,negative,customer_support
+2026-05-14,C00919,East,P003,Great value for the price.,positive,product_quality
+2026-05-14,C00920,West,P003,"It's okay, does what it says.",neutral,packaging
+2026-05-14,C00921,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-05-14,C00922,West,P003,"It's okay, does what it says.",neutral,customer_support
+2026-05-14,C00923,West,P004,"Average experience, nothing special.",neutral,product_quality
+2026-05-14,C00924,West,P001,Packaging could be better.,neutral,pricing
+2026-05-15,C00925,North,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-15,C00926,South,P004,Great value for the price.,positive,product_quality
+2026-05-15,C00927,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-05-15,C00928,South,P003,Great value for the price.,positive,product_quality
+2026-05-15,C00929,East,P002,"It's okay, does what it says.",neutral,product_quality
+2026-05-15,C00930,East,P003,Fast setup and easy to use.,positive,product_quality
+2026-05-16,C00931,North,P002,Really happy with the product quality.,positive,product_quality
+2026-05-16,C00932,North,P004,Product stopped working after a week.,negative,pricing
+2026-05-16,C00933,South,P002,Product stopped working after a week.,negative,product_quality
+2026-05-16,C00934,West,P004,Product stopped working after a week.,negative,customer_support
+2026-05-16,C00935,West,P002,Great value for the price.,positive,product_quality
+2026-05-16,C00936,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-05-16,C00937,West,P002,"Average experience, nothing special.",neutral,pricing
+2026-05-17,C00938,North,P002,"It's okay, does what it says.",neutral,packaging
+2026-05-17,C00939,South,P002,"Average experience, nothing special.",neutral,packaging
+2026-05-17,C00940,East,P001,"Average experience, nothing special.",neutral,product_quality
+2026-05-17,C00941,East,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-17,C00942,East,P001,"Average experience, nothing special.",neutral,product_quality
+2026-05-17,C00943,East,P001,Packaging could be better.,neutral,packaging
+2026-05-17,C00944,West,P001,Really happy with the product quality.,positive,product_quality
+2026-05-18,C00945,North,P001,Great value for the price.,positive,product_quality
+2026-05-18,C00946,North,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-18,C00947,North,P004,"Average experience, nothing special.",neutral,pricing
+2026-05-18,C00948,North,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-18,C00949,South,P001,Really happy with the product quality.,positive,product_quality
+2026-05-18,C00950,South,P004,"It's okay, does what it says.",neutral,product_quality
+2026-05-18,C00951,South,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-18,C00952,East,P002,Not as described on the listing.,negative,customer_support
+2026-05-18,C00953,West,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-19,C00954,North,P004,Product stopped working after a week.,negative,customer_support
+2026-05-19,C00955,South,P001,Packaging could be better.,neutral,customer_support
+2026-05-19,C00956,South,P001,Product stopped working after a week.,negative,product_quality
+2026-05-19,C00957,West,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-19,C00958,West,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-20,C00959,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-05-20,C00960,North,P002,Not as described on the listing.,negative,packaging
+2026-05-20,C00961,South,P004,Fast setup and easy to use.,positive,product_quality
+2026-05-20,C00962,East,P004,Fast setup and easy to use.,positive,product_quality
+2026-05-20,C00963,East,P004,Really happy with the product quality.,positive,product_quality
+2026-05-20,C00964,East,P003,Product stopped working after a week.,negative,customer_support
+2026-05-20,C00965,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-05-21,C00966,East,P003,Not as described on the listing.,negative,product_quality
+2026-05-21,C00967,West,P001,"Average experience, nothing special.",neutral,pricing
+2026-05-21,C00968,West,P004,"It's okay, does what it says.",neutral,product_quality
+2026-05-21,C00969,West,P001,Really happy with the product quality.,positive,product_quality
+2026-05-21,C00970,West,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-22,C00971,South,P001,Really happy with the product quality.,positive,product_quality
+2026-05-22,C00972,East,P001,Packaging could be better.,neutral,packaging
+2026-05-22,C00973,East,P003,Fast setup and easy to use.,positive,product_quality
+2026-05-22,C00974,East,P002,Really happy with the product quality.,positive,product_quality
+2026-05-22,C00975,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-05-23,C00976,North,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-23,C00977,South,P003,Product stopped working after a week.,negative,customer_support
+2026-05-23,C00978,South,P004,"Average experience, nothing special.",neutral,product_quality
+2026-05-23,C00979,East,P001,"Average experience, nothing special.",neutral,product_quality
+2026-05-23,C00980,East,P003,Packaging could be better.,neutral,customer_support
+2026-05-23,C00981,East,P002,Great value for the price.,positive,product_quality
+2026-05-23,C00982,East,P003,Great value for the price.,positive,product_quality
+2026-05-23,C00983,West,P002,Not as described on the listing.,negative,packaging
+2026-05-23,C00984,West,P001,Customer support was slow to respond.,negative,pricing
+2026-05-24,C00985,North,P001,"It's okay, does what it says.",neutral,pricing
+2026-05-24,C00986,South,P001,Packaging could be better.,neutral,product_quality
+2026-05-24,C00987,South,P003,Really happy with the product quality.,positive,product_quality
+2026-05-24,C00988,East,P001,Fast setup and easy to use.,positive,product_quality
+2026-05-24,C00989,East,P003,"It's okay, does what it says.",neutral,customer_support
+2026-05-24,C00990,West,P003,Customer support was slow to respond.,negative,product_quality
+2026-05-25,C00991,North,P002,Great value for the price.,positive,product_quality
+2026-05-26,C00992,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-05-26,C00993,South,P002,Fast setup and easy to use.,positive,product_quality
+2026-05-26,C00994,East,P004,Not as described on the listing.,negative,customer_support
+2026-05-26,C00995,West,P002,"Average experience, nothing special.",neutral,pricing
+2026-05-27,C00996,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-05-27,C00997,South,P003,"Average experience, nothing special.",neutral,customer_support
+2026-05-27,C00998,South,P001,Product stopped working after a week.,negative,pricing
+2026-05-27,C00999,East,P004,Great value for the price.,positive,product_quality
+2026-05-28,C01000,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-05-28,C01001,North,P001,Packaging could be better.,neutral,customer_support
+2026-05-28,C01002,South,P002,"Average experience, nothing special.",neutral,customer_support
+2026-05-28,C01003,South,P004,Really happy with the product quality.,positive,product_quality
+2026-05-28,C01004,South,P001,Product stopped working after a week.,negative,customer_support
+2026-05-28,C01005,East,P001,Packaging could be better.,neutral,customer_support
+2026-05-28,C01006,West,P002,Great value for the price.,positive,product_quality
+2026-05-28,C01007,West,P002,"It's okay, does what it says.",neutral,packaging
+2026-05-28,C01008,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-05-29,C01009,North,P002,"Average experience, nothing special.",neutral,customer_support
+2026-05-29,C01010,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-05-29,C01011,South,P004,Fast setup and easy to use.,positive,product_quality
+2026-05-29,C01012,East,P001,Great value for the price.,positive,product_quality
+2026-05-29,C01013,West,P002,Customer support was slow to respond.,negative,pricing
+2026-05-30,C01014,North,P002,Not as described on the listing.,negative,customer_support
+2026-05-30,C01015,North,P004,Product stopped working after a week.,negative,packaging
+2026-05-30,C01016,South,P002,Great value for the price.,positive,product_quality
+2026-05-30,C01017,South,P001,Really happy with the product quality.,positive,product_quality
+2026-05-30,C01018,East,P004,Really happy with the product quality.,positive,product_quality
+2026-05-30,C01019,West,P004,Great value for the price.,positive,product_quality
+2026-05-31,C01020,North,P002,Really happy with the product quality.,positive,product_quality
+2026-05-31,C01021,South,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-05-31,C01022,East,P001,Great value for the price.,positive,product_quality
+2026-05-31,C01023,West,P001,"It's okay, does what it says.",neutral,customer_support
+2026-05-31,C01024,West,P003,Not as described on the listing.,negative,packaging
+2026-06-01,C01025,North,P003,Great value for the price.,positive,product_quality
+2026-06-01,C01026,North,P001,"Average experience, nothing special.",neutral,packaging
+2026-06-01,C01027,East,P004,Fast setup and easy to use.,positive,product_quality
+2026-06-01,C01028,East,P002,Great value for the price.,positive,product_quality
+2026-06-01,C01029,East,P001,Customer support was slow to respond.,negative,product_quality
+2026-06-01,C01030,West,P002,Customer support was slow to respond.,negative,packaging
+2026-06-02,C01031,South,P003,Great value for the price.,positive,product_quality
+2026-06-02,C01032,West,P004,Product stopped working after a week.,negative,product_quality
+2026-06-02,C01033,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-03,C01034,North,P003,Fast setup and easy to use.,positive,product_quality
+2026-06-03,C01035,South,P001,"Average experience, nothing special.",neutral,customer_support
+2026-06-03,C01036,South,P002,Really happy with the product quality.,positive,product_quality
+2026-06-03,C01037,East,P002,"It's okay, does what it says.",neutral,pricing
+2026-06-03,C01038,West,P004,Great value for the price.,positive,product_quality
+2026-06-03,C01039,West,P001,Customer support was slow to respond.,negative,customer_support
+2026-06-04,C01040,North,P004,Not as described on the listing.,negative,customer_support
+2026-06-04,C01041,North,P001,Customer support was slow to respond.,negative,product_quality
+2026-06-04,C01042,North,P001,Great value for the price.,positive,product_quality
+2026-06-04,C01043,North,P002,Product stopped working after a week.,negative,product_quality
+2026-06-04,C01044,North,P004,Packaging could be better.,neutral,pricing
+2026-06-04,C01045,South,P003,Really happy with the product quality.,positive,product_quality
+2026-06-04,C01046,South,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-04,C01047,East,P004,Great value for the price.,positive,product_quality
+2026-06-04,C01048,West,P002,"Average experience, nothing special.",neutral,customer_support
+2026-06-05,C01049,North,P002,Great value for the price.,positive,product_quality
+2026-06-05,C01050,East,P001,Really happy with the product quality.,positive,product_quality
+2026-06-05,C01051,West,P002,"Average experience, nothing special.",neutral,pricing
+2026-06-05,C01052,West,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-06,C01053,North,P001,"It's okay, does what it says.",neutral,customer_support
+2026-06-06,C01054,North,P003,Not as described on the listing.,negative,pricing
+2026-06-06,C01055,South,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-06,C01056,South,P002,Fast setup and easy to use.,positive,product_quality
+2026-06-06,C01057,South,P001,Really happy with the product quality.,positive,product_quality
+2026-06-06,C01058,East,P001,"Average experience, nothing special.",neutral,packaging
+2026-06-06,C01059,East,P002,Packaging could be better.,neutral,packaging
+2026-06-06,C01060,East,P002,Really happy with the product quality.,positive,product_quality
+2026-06-06,C01061,East,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-06,C01062,West,P002,"It's okay, does what it says.",neutral,packaging
+2026-06-07,C01063,North,P004,"Average experience, nothing special.",neutral,packaging
+2026-06-07,C01064,North,P001,Great value for the price.,positive,product_quality
+2026-06-07,C01065,North,P004,"It's okay, does what it says.",neutral,pricing
+2026-06-07,C01066,South,P001,Great value for the price.,positive,product_quality
+2026-06-07,C01067,West,P003,Really happy with the product quality.,positive,product_quality
+2026-06-07,C01068,West,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-07,C01069,West,P004,Product stopped working after a week.,negative,product_quality
+2026-06-08,C01070,North,P002,"Average experience, nothing special.",neutral,product_quality
+2026-06-08,C01071,North,P001,Not as described on the listing.,negative,packaging
+2026-06-08,C01072,South,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-08,C01073,South,P002,Fast setup and easy to use.,positive,product_quality
+2026-06-08,C01074,South,P002,"Average experience, nothing special.",neutral,pricing
+2026-06-08,C01075,South,P002,Product stopped working after a week.,negative,packaging
+2026-06-08,C01076,West,P003,Really happy with the product quality.,positive,product_quality
+2026-06-08,C01077,West,P001,Packaging could be better.,neutral,pricing
+2026-06-08,C01078,West,P002,Packaging could be better.,neutral,packaging
+2026-06-09,C01079,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-06-09,C01080,North,P001,Great value for the price.,positive,product_quality
+2026-06-09,C01081,East,P002,Fast setup and easy to use.,positive,product_quality
+2026-06-09,C01082,West,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-09,C01083,West,P002,Fast setup and easy to use.,positive,product_quality
+2026-06-10,C01084,North,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-10,C01085,South,P004,"Average experience, nothing special.",neutral,product_quality
+2026-06-10,C01086,South,P003,Not as described on the listing.,negative,customer_support
+2026-06-10,C01087,South,P003,Great value for the price.,positive,product_quality
+2026-06-10,C01088,East,P004,Fast setup and easy to use.,positive,product_quality
+2026-06-10,C01089,West,P003,"It's okay, does what it says.",neutral,packaging
+2026-06-10,C01090,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-06-10,C01091,West,P002,Great value for the price.,positive,product_quality
+2026-06-10,C01092,West,P003,Great value for the price.,positive,product_quality
+2026-06-11,C01093,North,P002,Really happy with the product quality.,positive,product_quality
+2026-06-11,C01094,North,P003,Great value for the price.,positive,product_quality
+2026-06-11,C01095,North,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-11,C01096,East,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-11,C01097,East,P002,"It's okay, does what it says.",neutral,product_quality
+2026-06-11,C01098,West,P004,Great value for the price.,positive,product_quality
+2026-06-11,C01099,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-12,C01100,South,P003,Really happy with the product quality.,positive,product_quality
+2026-06-12,C01101,South,P003,Great value for the price.,positive,product_quality
+2026-06-12,C01102,East,P004,Customer support was slow to respond.,negative,customer_support
+2026-06-12,C01103,East,P004,Really happy with the product quality.,positive,product_quality
+2026-06-12,C01104,West,P003,Really happy with the product quality.,positive,product_quality
+2026-06-12,C01105,West,P003,Packaging could be better.,neutral,product_quality
+2026-06-13,C01106,North,P001,Really happy with the product quality.,positive,product_quality
+2026-06-13,C01107,North,P001,Not as described on the listing.,negative,product_quality
+2026-06-13,C01108,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-13,C01109,West,P003,Customer support was slow to respond.,negative,customer_support
+2026-06-14,C01110,North,P002,Product stopped working after a week.,negative,pricing
+2026-06-14,C01111,North,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-14,C01112,South,P004,"Average experience, nothing special.",neutral,product_quality
+2026-06-14,C01113,East,P003,Fast setup and easy to use.,positive,product_quality
+2026-06-14,C01114,East,P001,"Average experience, nothing special.",neutral,customer_support
+2026-06-14,C01115,East,P004,Customer support was slow to respond.,negative,pricing
+2026-06-14,C01116,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-15,C01117,North,P001,"It's okay, does what it says.",neutral,pricing
+2026-06-15,C01118,South,P002,Not as described on the listing.,negative,customer_support
+2026-06-15,C01119,East,P002,Packaging could be better.,neutral,packaging
+2026-06-15,C01120,East,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-16,C01121,North,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-16,C01122,South,P001,Really happy with the product quality.,positive,product_quality
+2026-06-16,C01123,South,P001,Great value for the price.,positive,product_quality
+2026-06-16,C01124,East,P001,Really happy with the product quality.,positive,product_quality
+2026-06-16,C01125,East,P001,Customer support was slow to respond.,negative,customer_support
+2026-06-16,C01126,West,P001,Product stopped working after a week.,negative,pricing
+2026-06-17,C01127,North,P001,Not as described on the listing.,negative,pricing
+2026-06-17,C01128,North,P002,Fast setup and easy to use.,positive,product_quality
+2026-06-17,C01129,North,P004,Product stopped working after a week.,negative,packaging
+2026-06-17,C01130,North,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-17,C01131,South,P001,Customer support was slow to respond.,negative,packaging
+2026-06-17,C01132,South,P003,Packaging could be better.,neutral,packaging
+2026-06-17,C01133,East,P004,Not as described on the listing.,negative,pricing
+2026-06-17,C01134,West,P002,Really happy with the product quality.,positive,product_quality
+2026-06-17,C01135,West,P003,Customer support was slow to respond.,negative,customer_support
+2026-06-17,C01136,West,P001,Great value for the price.,positive,product_quality
+2026-06-18,C01137,North,P003,Really happy with the product quality.,positive,product_quality
+2026-06-18,C01138,South,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-18,C01139,South,P004,Not as described on the listing.,negative,packaging
+2026-06-18,C01140,East,P003,"It's okay, does what it says.",neutral,product_quality
+2026-06-18,C01141,East,P004,Really happy with the product quality.,positive,product_quality
+2026-06-18,C01142,East,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-18,C01143,East,P003,Not as described on the listing.,negative,pricing
+2026-06-18,C01144,West,P004,Product stopped working after a week.,negative,customer_support
+2026-06-18,C01145,West,P004,"It's okay, does what it says.",neutral,product_quality
+2026-06-18,C01146,West,P003,Packaging could be better.,neutral,customer_support
+2026-06-18,C01147,West,P002,Product stopped working after a week.,negative,pricing
+2026-06-19,C01148,North,P002,"Average experience, nothing special.",neutral,customer_support
+2026-06-19,C01149,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-06-19,C01150,South,P001,Product stopped working after a week.,negative,pricing
+2026-06-19,C01151,South,P002,Really happy with the product quality.,positive,product_quality
+2026-06-19,C01152,East,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-19,C01153,East,P003,Really happy with the product quality.,positive,product_quality
+2026-06-19,C01154,East,P002,Really happy with the product quality.,positive,product_quality
+2026-06-19,C01155,West,P004,Fast setup and easy to use.,positive,product_quality
+2026-06-19,C01156,West,P001,"It's okay, does what it says.",neutral,customer_support
+2026-06-19,C01157,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-20,C01158,North,P004,Not as described on the listing.,negative,product_quality
+2026-06-20,C01159,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-20,C01160,East,P004,Customer support was slow to respond.,negative,packaging
+2026-06-20,C01161,West,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-20,C01162,West,P004,Fast setup and easy to use.,positive,product_quality
+2026-06-20,C01163,West,P002,"Average experience, nothing special.",neutral,pricing
+2026-06-21,C01164,North,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-21,C01165,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-21,C01166,East,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-21,C01167,East,P004,Great value for the price.,positive,product_quality
+2026-06-21,C01168,West,P003,Not as described on the listing.,negative,customer_support
+2026-06-21,C01169,West,P003,Really happy with the product quality.,positive,product_quality
+2026-06-22,C01170,South,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-22,C01171,East,P003,Really happy with the product quality.,positive,product_quality
+2026-06-22,C01172,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-22,C01173,West,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-23,C01174,East,P003,Really happy with the product quality.,positive,product_quality
+2026-06-23,C01175,East,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-23,C01176,West,P002,"It's okay, does what it says.",neutral,pricing
+2026-06-23,C01177,West,P002,Product stopped working after a week.,negative,packaging
+2026-06-23,C01178,West,P004,Customer support was slow to respond.,negative,packaging
+2026-06-24,C01179,East,P004,"It's okay, does what it says.",neutral,pricing
+2026-06-24,C01180,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-06-24,C01181,West,P001,Customer support was slow to respond.,negative,packaging
+2026-06-24,C01182,West,P002,"It's okay, does what it says.",neutral,packaging
+2026-06-24,C01183,West,P003,Packaging could be better.,neutral,customer_support
+2026-06-24,C01184,West,P004,Fast setup and easy to use.,positive,product_quality
+2026-06-25,C01185,East,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-25,C01186,East,P001,"Average experience, nothing special.",neutral,packaging
+2026-06-25,C01187,East,P001,Really happy with the product quality.,positive,product_quality
+2026-06-25,C01188,West,P003,Really happy with the product quality.,positive,product_quality
+2026-06-25,C01189,West,P002,Really happy with the product quality.,positive,product_quality
+2026-06-25,C01190,West,P002,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-26,C01191,North,P001,Product stopped working after a week.,negative,customer_support
+2026-06-26,C01192,South,P003,Really happy with the product quality.,positive,product_quality
+2026-06-26,C01193,East,P001,Really happy with the product quality.,positive,product_quality
+2026-06-26,C01194,East,P003,Fast setup and easy to use.,positive,product_quality
+2026-06-26,C01195,West,P001,"It's okay, does what it says.",neutral,packaging
+2026-06-27,C01196,North,P001,Packaging could be better.,neutral,packaging
+2026-06-27,C01197,East,P004,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-27,C01198,East,P001,Great value for the price.,positive,product_quality
+2026-06-27,C01199,East,P001,Packaging could be better.,neutral,pricing
+2026-06-27,C01200,West,P003,Fast setup and easy to use.,positive,product_quality
+2026-06-27,C01201,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-27,C01202,West,P001,Fast setup and easy to use.,positive,product_quality
+2026-06-28,C01203,South,P002,Great value for the price.,positive,product_quality
+2026-06-28,C01204,South,P001,Great value for the price.,positive,product_quality
+2026-06-28,C01205,South,P001,Product stopped working after a week.,negative,product_quality
+2026-06-28,C01206,South,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-28,C01207,East,P003,"Average experience, nothing special.",neutral,packaging
+2026-06-28,C01208,East,P002,Great value for the price.,positive,product_quality
+2026-06-28,C01209,West,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-06-29,C01210,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-06-29,C01211,East,P001,"It's okay, does what it says.",neutral,packaging
+2026-06-29,C01212,West,P002,Not as described on the listing.,negative,pricing
+2026-06-30,C01213,North,P002,Product stopped working after a week.,negative,packaging
+2026-06-30,C01214,North,P004,Fast setup and easy to use.,positive,product_quality
+2026-06-30,C01215,South,P002,Product stopped working after a week.,negative,packaging
+2026-06-30,C01216,South,P002,Really happy with the product quality.,positive,product_quality
+2026-06-30,C01217,West,P004,Great value for the price.,positive,product_quality
+2026-07-01,C01218,North,P003,Fast setup and easy to use.,positive,product_quality
+2026-07-01,C01219,North,P001,Really happy with the product quality.,positive,product_quality
+2026-07-01,C01220,North,P002,"It's okay, does what it says.",neutral,product_quality
+2026-07-01,C01221,East,P001,Fast setup and easy to use.,positive,product_quality
+2026-07-02,C01222,North,P002,Packaging could be better.,neutral,pricing
+2026-07-02,C01223,North,P002,"It's okay, does what it says.",neutral,customer_support
+2026-07-02,C01224,North,P001,"Works exactly as described, would buy again.",positive,product_quality
+2026-07-02,C01225,South,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-07-02,C01226,South,P001,Not as described on the listing.,negative,customer_support
+2026-07-02,C01227,South,P002,Really happy with the product quality.,positive,product_quality
+2026-07-02,C01228,West,P003,Packaging could be better.,neutral,pricing
+2026-07-02,C01229,West,P003,Really happy with the product quality.,positive,product_quality
+2026-07-03,C01230,North,P003,"Works exactly as described, would buy again.",positive,product_quality
+2026-07-03,C01231,North,P002,Really happy with the product quality.,positive,product_quality
+2026-07-03,C01232,South,P002,"Average experience, nothing special.",neutral,product_quality
+2026-07-03,C01233,West,P003,Great value for the price.,positive,product_quality
+2026-07-04,C01234,North,P004,Really happy with the product quality.,positive,product_quality
+2026-07-04,C01235,South,P003,Fast setup and easy to use.,positive,product_quality
+2026-07-04,C01236,East,P001,Customer support was slow to respond.,negative,pricing
+2026-07-04,C01237,East,P003,Really happy with the product quality.,positive,product_quality
+2026-07-04,C01238,West,P002,Great value for the price.,positive,product_quality
+2026-07-05,C01239,North,P001,Really happy with the product quality.,positive,product_quality
+2026-07-05,C01240,North,P001,Customer support was slow to respond.,negative,product_quality
+2026-07-05,C01241,North,P002,Not as described on the listing.,negative,pricing
+2026-07-05,C01242,South,P004,Great value for the price.,positive,product_quality
+2026-07-05,C01243,South,P001,Really happy with the product quality.,positive,product_quality
+2026-07-05,C01244,West,P004,Packaging could be better.,neutral,product_quality
+2026-07-05,C01245,West,P004,Packaging could be better.,neutral,customer_support
