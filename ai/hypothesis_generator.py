@@ -37,6 +37,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import List
 from .evidence_retriever import AnomalyEvidencePackage
+from .feedback_store import get_confidence_adjustment
+from . import model_trainer
 
 
 @dataclass
@@ -47,6 +49,11 @@ class Hypothesis:
     supporting_evidence_ids: List[str]
     confidence_score: float = 0.5
     evidence_basis: str = ""  # human-readable note on what the confidence is based on
+    learning_note: str = ""          # how past analyst feedback adjusted this score, if at all
+    confidence_adjustment: float = 0.0  # the raw adjustment applied, for the UI badge
+    learning_sample_count: int = 0      # how many past feedback entries the adjustment is based on
+    ml_used: bool = False               # True if the trained classifier (not just the heuristic) scored this
+    ml_probability: float | None = None # raw model output, for the UI badge
 
 
 @dataclass
@@ -96,10 +103,58 @@ def generate_hypotheses_for_anomaly(evidence_package: AnomalyEvidencePackage) ->
     event_ids = [item.evidence_id for item in evidence_package.event_records]
 
     def make(hyp_id, title, description, ids):
-        score, basis = _derive_confidence(ids, total_evidence)
+        base_score, basis = _derive_confidence(ids, total_evidence)
+        evidence_count = len(ids)
+
+        # STEP 1: try the trained classifier first - this is the real
+        # "trained model" path (see model_trainer.py). It only activates
+        # once enough labeled analyst feedback exists.
+        ml_result = model_trainer.predict_confidence(
+            evidence_count=evidence_count,
+            base_confidence_score=base_score,
+            deviation_pct=anomaly.deviation_pct,
+            modified_z_score=anomaly.modified_z_score,
+            severity=anomaly.severity,
+            nature=getattr(anomaly, "nature", "RISK"),
+        )
+
+        if ml_result.get("available"):
+            # Blend the evidence-derived score with the model's learned
+            # probability rather than replacing it outright - keeps the
+            # score anchored to this specific anomaly's actual evidence
+            # even as the model's influence grows with more training data.
+            ml_prob = ml_result["probability"]
+            adjusted_score = round(min(0.95, max(0.05, (0.5 * base_score) + (0.5 * ml_prob))), 2)
+            learning_note = (
+                f"🤖 Trained model (logistic regression, {ml_result['trained_on_samples']} labeled "
+                f"examples, {ml_result['train_accuracy']:.0%} train accuracy) predicts "
+                f"{ml_prob:.0%} chance this hypothesis type would be confirmed."
+            )
+            return Hypothesis(
+                hypothesis_id=hyp_id, title=title, description=description,
+                supporting_evidence_ids=ids, confidence_score=adjusted_score,
+                evidence_basis=basis,
+                learning_note=learning_note,
+                confidence_adjustment=round(adjusted_score - base_score, 3),
+                learning_sample_count=ml_result["trained_on_samples"],
+                ml_used=True,
+                ml_probability=ml_prob,
+            )
+
+        # STEP 2: fall back to the transparent heuristic adjustment while
+        # there isn't yet enough labeled data to trust a trained model.
+        learning = get_confidence_adjustment(metric=anomaly.metric, hypothesis_title=title)
+        adjusted_score = round(
+            min(0.95, max(0.05, base_score + learning["adjustment"])), 2
+        )
+
         return Hypothesis(
             hypothesis_id=hyp_id, title=title, description=description,
-            supporting_evidence_ids=ids, confidence_score=score, evidence_basis=basis,
+            supporting_evidence_ids=ids, confidence_score=adjusted_score,
+            evidence_basis=basis,
+            learning_note=learning["note"],
+            confidence_adjustment=learning["adjustment"],
+            learning_sample_count=learning["sample_count"],
         )
 
     if is_opportunity:

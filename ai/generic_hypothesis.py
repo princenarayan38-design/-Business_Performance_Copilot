@@ -24,6 +24,8 @@ from __future__ import annotations
 
 from .hypothesis_generator import Hypothesis, HypothesisGenerationResult, _derive_confidence
 from .generic_evidence import GenericEvidencePackage
+from .feedback_store import get_confidence_adjustment
+from . import model_trainer
 
 
 def generate_generic_hypotheses(evidence_package: GenericEvidencePackage) -> HypothesisGenerationResult:
@@ -37,7 +39,7 @@ def generate_generic_hypotheses(evidence_package: GenericEvidencePackage) -> Hyp
             continue  # no evidence from this source for this week - nothing to hypothesize
 
         ids = [item.evidence_id for item in items[:3]]
-        score, basis = _derive_confidence(ids, total_evidence)
+        base_score, basis = _derive_confidence(ids, total_evidence)
 
         verb = "is time-correlated with the gain" if is_opportunity else "is time-correlated with the deviation"
         title = f"Factor Linked To: {source_label}"
@@ -47,13 +49,48 @@ def generate_generic_hypotheses(evidence_package: GenericEvidencePackage) -> Hyp
             f"worth checking with the team before treating it as a confirmed cause."
         )
 
+        ml_result = model_trainer.predict_confidence(
+            evidence_count=len(ids),
+            base_confidence_score=base_score,
+            deviation_pct=getattr(anomaly, "deviation_pct", 0.0),
+            modified_z_score=getattr(anomaly, "modified_z_score", 0.0),
+            severity=getattr(anomaly, "severity", "MEDIUM"),
+            nature=getattr(anomaly, "nature", "RISK"),
+        )
+
+        if ml_result.get("available"):
+            ml_prob = ml_result["probability"]
+            adjusted_score = round(min(0.95, max(0.05, (0.5 * base_score) + (0.5 * ml_prob))), 2)
+            learning_note = (
+                f"🤖 Trained model ({ml_result['trained_on_samples']} labeled examples, "
+                f"{ml_result['train_accuracy']:.0%} train accuracy) predicts {ml_prob:.0%} "
+                f"chance this hypothesis type would be confirmed."
+            )
+            hyp_kwargs = dict(
+                confidence_score=adjusted_score,
+                learning_note=learning_note,
+                confidence_adjustment=round(adjusted_score - base_score, 3),
+                learning_sample_count=ml_result["trained_on_samples"],
+                ml_used=True,
+                ml_probability=ml_prob,
+            )
+        else:
+            learning = get_confidence_adjustment(metric=anomaly.metric, hypothesis_title=title)
+            adjusted_score = round(min(0.95, max(0.05, base_score + learning["adjustment"])), 2)
+            hyp_kwargs = dict(
+                confidence_score=adjusted_score,
+                learning_note=learning["note"],
+                confidence_adjustment=learning["adjustment"],
+                learning_sample_count=learning["sample_count"],
+            )
+
         hypotheses.append(Hypothesis(
             hypothesis_id=f"H{i}",
             title=title,
             description=description,
             supporting_evidence_ids=ids,
-            confidence_score=score,
             evidence_basis=basis,
+            **hyp_kwargs,
         ))
 
     if not hypotheses:

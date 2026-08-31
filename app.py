@@ -25,6 +25,7 @@ from ai.universal_pipeline import (
     suggest_column_roles, ColumnMapping,
 )
 from ai.feedback_store import record_feedback, get_feedback, get_calibration_stats, CONFIRMED, REJECTED
+from ai.model_trainer import train_model, get_model_status
 from ai.event_context import (
     load_events_from_dataframe, load_events_from_csv, get_events_for_week, format_events_for_prompt,
 )
@@ -492,6 +493,34 @@ else:
             "Agreement = system said Validated and analyst Confirmed, OR system said Refuted "
             "and analyst Rejected. Low agreement means the scoring thresholds need retuning."
         )
+    st.sidebar.caption(
+        "🧠 This feedback isn't just displayed — it retrains a real classifier "
+        "(see 🤖 Confidence Model panel below) and, until that model has enough data, "
+        "a transparent heuristic recalibrates scores for matching hypothesis types."
+    )
+
+# ---------------------------------------------------------------------------
+# Trained model status — the literal "self-learning" component. Shows
+# whether enough analyst feedback exists to train a real classifier yet,
+# and if so, how big its training set is and what its train accuracy is.
+# ---------------------------------------------------------------------------
+st.sidebar.markdown("---")
+st.sidebar.subheader("🤖 Confidence Model")
+model_status = get_model_status()
+if not model_status["trained"]:
+    st.sidebar.caption(f"Not trained yet — {model_status['reason']}")
+    st.sidebar.caption(
+        "Falls back to the heuristic recalibration above until there's enough "
+        "labeled feedback (both Confirmed AND Rejected examples) to fit a classifier."
+    )
+else:
+    st.sidebar.metric("Trained on", f"{model_status['sample_count']} examples")
+    st.sidebar.metric("Train accuracy", f"{model_status['train_accuracy']:.0%}")
+    st.sidebar.caption(
+        f"Last retrained: {model_status['trained_at'][:19].replace('T', ' ')} UTC. "
+        "Retrains automatically after every Confirm/Reject click — this is train-set "
+        "accuracy, not held-out validation, since the dataset is still small."
+    )
 
 def run_pipeline_for_anomaly(anomaly, revenue_anomalies):
     """
@@ -789,6 +818,10 @@ with st.expander("🗂️ Analyze Your Own Data (upload CSV / Excel)", expanded=
                     with st.expander(f"[{h.hypothesis_id}] {h.title}" + (f" — {verdict_pill(test_result.verdict)}" if test_result else ""), expanded=False):
                         st.write(h.description)
                         st.caption(f"🧮 Confidence: {h.confidence_score:.2f} — {h.evidence_basis}")
+                        if h.confidence_adjustment != 0:
+                            st.success(h.learning_note)
+                        elif h.learning_sample_count > 0:
+                            st.caption(h.learning_note)
                         if test_result:
                             st.markdown(f"**Verdict:** {verdict_pill(test_result.verdict)} &nbsp; Score: **{test_result.final_score}**", unsafe_allow_html=True)
                             st.caption(test_result.rationale)
@@ -808,17 +841,21 @@ with st.expander("🗂️ Analyze Your Own Data (upload CSV / Excel)", expanded=
                         fcol1, fcol2 = st.columns(2)
                         with fcol1:
                             if st.button("✅ Confirm", key=f"custom_confirm_{h.hypothesis_id}_{a.week}", use_container_width=True):
-                                record_feedback(a, h.hypothesis_id, h.title,
+                                record_feedback(a, h,
                                                  system_verdict=test_result.verdict if test_result else "Unknown",
                                                  system_score=test_result.final_score if test_result else h.confidence_score,
                                                  analyst_verdict=CONFIRMED, note=note)
+                                with st.spinner("🔄 Retraining confidence model on updated feedback..."):
+                                    train_model()
                                 st.rerun()
                         with fcol2:
                             if st.button("❌ Reject", key=f"custom_reject_{h.hypothesis_id}_{a.week}", use_container_width=True):
-                                record_feedback(a, h.hypothesis_id, h.title,
+                                record_feedback(a, h,
                                                  system_verdict=test_result.verdict if test_result else "Unknown",
                                                  system_score=test_result.final_score if test_result else h.confidence_score,
                                                  analyst_verdict=REJECTED, note=note)
+                                with st.spinner("🔄 Retraining confidence model on updated feedback..."):
+                                    train_model()
                                 st.rerun()
 
                 st.markdown("##### Executive Summary")
@@ -974,6 +1011,10 @@ if result:
             with st.expander(f"[{h.hypothesis_id}] {h.title}"):
                 st.write(h.description)
                 st.caption(f"🧮 Confidence: {h.confidence_score:.2f} — {h.evidence_basis}")
+                if h.confidence_adjustment != 0:
+                    st.success(h.learning_note)
+                elif h.learning_sample_count > 0:
+                    st.caption(h.learning_note)
                 st.markdown("**Cited Evidence (co-occurring in time) — click an ID to inspect the exact raw row:**")
                 evidence_id_buttons(h.supporting_evidence_ids, key_prefix=h.hypothesis_id)
 
@@ -990,20 +1031,24 @@ if result:
                 with fb_col1:
                     if st.button("✅ Confirm this factor", key=f"confirm_{h.hypothesis_id}_{anomaly.week}", use_container_width=True):
                         record_feedback(
-                            anomaly, h.hypothesis_id, h.title,
+                            anomaly, h,
                             system_verdict=test_result.verdict if test_result else "Unknown",
                             system_score=test_result.final_score if test_result else h.confidence_score,
                             analyst_verdict=CONFIRMED, note=note,
                         )
+                        with st.spinner("🔄 Retraining confidence model on updated feedback..."):
+                            train_model()
                         st.rerun()
                 with fb_col2:
                     if st.button("❌ Reject this factor", key=f"reject_{h.hypothesis_id}_{anomaly.week}", use_container_width=True):
                         record_feedback(
-                            anomaly, h.hypothesis_id, h.title,
+                            anomaly, h,
                             system_verdict=test_result.verdict if test_result else "Unknown",
                             system_score=test_result.final_score if test_result else h.confidence_score,
                             analyst_verdict=REJECTED, note=note,
                         )
+                        with st.spinner("🔄 Retraining confidence model on updated feedback..."):
+                            train_model()
                         st.rerun()
 
         if st.session_state.selected_evidence_id:
@@ -1138,7 +1183,15 @@ clear_clicked = clear_col.button("Clear chat")
 
 if clear_clicked:
     st.session_state.chat_history = []
-    st.session_state.user_query_input = ""
+    # Can't assign to st.session_state.user_query_input directly here -
+    # the text_input widget above has already been instantiated with this
+    # key for the current script run, and Streamlit forbids overwriting a
+    # widget-bound key post-instantiation (StreamlitAPIException). Deleting
+    # the key + rerunning is the supported way to clear it: on the next
+    # run the widget hasn't been created yet, so it reinitializes empty.
+    if "user_query_input" in st.session_state:
+        del st.session_state.user_query_input
+    st.rerun()
 
 if ask_clicked and user_query:
     with st.spinner(f"{OLLAMA_MODEL} is analyzing locally..."):
