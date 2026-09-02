@@ -1,75 +1,258 @@
-# BusinessIntelligence.ai
+# BusinessIntelligence.ai — Autonomous Decision Intelligence Copilot
 
-**An autonomous decision intelligence engine** that goes beyond "what changed" dashboards to investigate *why* — combining statistical anomaly detection, evidence retrieval, hypothesis generation, a self-learning confidence engine, and a local LLM assistant, on either a built-in demo dataset or your own uploaded business data.
+**Team Scubacats | Accenture Innovation Challenge 2026**
 
-Built by Team Scubacats for the Accenture Innovation Challenge 2026.
+> Most BI dashboards tell you *a number moved*. BusinessIntelligence.ai tells you **why it moved, how confident it is, and what to do next** — then gets better at that judgment every time an analyst uses it.
 
----
-
-## What this actually does
-
-Most BI dashboards tell you a number moved. This system tries to go one step further:
-
-1. **Detects** statistically meaningful anomalies in a metric (revenue, units, delivery times, or any custom metric you upload) using a robust median/MAD-based method — not just "did this cross an arbitrary line."
-2. **Classifies** each anomaly as a growth **opportunity** or a **risk**, since not every large deviation is bad news (a revenue spike and a delivery-delay spike are both "anomalies" but mean opposite things).
-3. **Retrieves evidence** — raw records (deliveries, feedback, support tickets, whatever you provide) that fall within the anomaly's time window.
-4. **Generates candidate explanations** for the anomaly based on that evidence, with a confidence score derived from how much evidence actually supports each one.
-5. **Lets an analyst confirm or reject** each candidate after real investigation — and this feedback doesn't just sit in a log. It retrains a real classifier (`ai/model_trainer.py`) after every single decision, so the system's confidence scoring **gets measurably more accurate every session**, without any manual retraining step. See [Self-Learning Confidence Engine](#self-learning-confidence-engine) below for exactly how.
-6. **Forecasts** the metric forward with a simple trend + confidence band.
-7. **Chats** with a local Llama 3 model (via Ollama) that's grounded in the actual pipeline output, not just guessing.
-
-**Important honesty note, stated up front:** evidence-to-hypothesis matching is done by **time-window correlation, not causal inference**. If a support ticket and a revenue drop happened the same week, the system will surface that as a "contributing-factor candidate" — it has not proven that one caused the other. This is by design, and the UI labels it that way everywhere (see [Known Limitations](#known-limitations) below).
+![Overview](./screenshots/01-overview.png)
 
 ---
 
-## Two ways to use it
-
-### 1. Demo Mode (built-in dataset)
-Ships with a synthetic dataset (`data/raw/*.csv`) simulating a multi-region business with a deliberate anomaly baked in (a North-region disruption). Good for exploring what the system does without needing your own data. Click **"▶️ Run Full Intelligence Pipeline"** in the sidebar.
-
-### 2. Universal Mode (your own data)
-Upload any CSV/Excel file, map your own columns (date, metric, category) via dropdowns, and the same statistical engine runs on your real numbers. Optionally upload supporting evidence files (support tickets, delivery logs, etc.) to unlock the full hypothesis-generation pipeline on your own data too. Find this under **"🗂️ Analyze Your Own Data"**.
+## Table of Contents
+1. [Problem Statement](#1-problem-statement)
+2. [Solution Overview](#2-solution-overview)
+3. [How It Works in Practice (Walkthrough)](#3-how-it-works-in-practice-walkthrough)
+4. [How AI Enables / Enhances the Solution](#4-how-ai-enables--enhances-the-solution)
+5. [System Architecture](#5-system-architecture)
+6. [Implementation Details](#6-implementation-details)
+7. [Key Features](#7-key-features)
+8. [Scalability](#8-scalability)
+9. [Impact](#9-impact)
+10. [Tech Stack](#10-tech-stack)
+11. [Setup & Run](#11-setup--run)
+12. [Known Limitations](#12-known-limitations)
+13. [Roadmap](#13-roadmap)
 
 ---
 
-## Project structure
+## 1. Problem Statement
+
+Business teams are drowning in dashboards that show *what* changed (revenue dipped, delivery times spiked) but leave the *why* to a human analyst who has to manually cross-reference support tickets, delivery logs, and calendars — a process that's slow, inconsistent, and rarely documented for reuse. Meanwhile, most "AI insight" tools either hallucinate causes with no evidence, or require heavyweight, cloud-only infrastructure that's a non-starter for cost-sensitive or data-sensitive teams.
+
+## 2. Solution Overview
+
+BusinessIntelligence.ai is an **autonomous decision-intelligence engine** that:
+
+1. **Detects** statistically meaningful anomalies in any business metric using a robust median/MAD-based method.
+2. **Classifies** each anomaly as a growth **opportunity** or a **risk**.
+3. **Retrieves real evidence** (delivery records, customer feedback, calendar events) from the same time window.
+4. **Generates candidate explanations** grounded in that evidence — never invented.
+5. **Scores each hypothesis's confidence** based on how much evidence actually supports it.
+6. **Learns from analyst feedback** (Confirm/Reject) — retraining a real classifier after every decision, so confidence scoring measurably improves over time.
+7. **Forecasts** the metric forward with a confidence band.
+8. **Chats** via a local Llama 3 model that is grounded in the pipeline's actual output — not a generic chatbot bolted on top.
+
+It runs equally well in two modes:
+- **Demo Mode** — a pre-loaded synthetic multi-region dataset with a baked-in anomaly, for quick evaluation.
+- **Universal Mode** — upload your own CSV/Excel data (any date + numeric metric + optional category columns) and run the same statistical engine on it.
+
+---
+
+## 3. How It Works in Practice (Walkthrough)
+
+### Step 1 — Run the pipeline
+The analyst clicks **Run Analysis**. The engine scans every metric/region combination, flags statistically significant deviations, and surfaces the single highest-impact anomaly first.
+
+![Growth opportunity detected](./screenshots/02-growth-opportunity-detail.png)
+
+Here, **Units Sold in West (Week 22)** is flagged as a +12.7% deviation — a **Growth Opportunity** (High Impact, score 10/10) — with the exact revenue trend chart marking the anomalous week.
+
+### Step 2 — Forecast the metric
+Every anomaly view includes an on-demand forecast (Prophet-based, with a 95% confidence interval) so the analyst can see where the metric is headed, not just where it's been.
+
+![Forecast](./screenshots/03-growth-opportunity-forecast-toggle.png)
+
+### Step 3 — AI generates hypotheses
+Rather than guessing, the system proposes **time-correlated candidate explanations** built from real uploaded/demo evidence — labeled explicitly as correlation, not proven causation.
+
+![AI Hypotheses](./screenshots/04-ai-hypotheses-growth.png)
+
+### Step 4 — Hypotheses are tested against evidence
+Each hypothesis is scored against the actual evidence records it cites (delivery logs, feedback, events) and given a confidence label and percentage — fully auditable.
+
+![Validation and evidence](./screenshots/05-validation-evidence-growth.png)
+
+### Step 5 — Executive summary & action plan
+The system synthesizes the strongest-supported hypothesis into a plain-English executive briefing with concrete next actions.
+
+![Executive briefing](./screenshots/06-executive-briefing-growth.png)
+
+### The same flow runs for risks, not just opportunities
+E.g. a **+118.6% spike in Avg Delivery Days in the North region** is caught, diagnosed against delivery/feedback evidence, and turned into an action plan (root cause: *Supply Chain Disruption & Late Deliveries*, score 0.71).
+
+![Risk anomaly](./screenshots/07-risk-anomaly-detail.png)
+![Risk forecast](./screenshots/09-risk-anomaly-forecast-expanded.png)
+![Risk hypotheses](./screenshots/10-ai-hypotheses-risk.png)
+![Risk evidence](./screenshots/11-validation-evidence-risk.png)
+![Risk executive briefing](./screenshots/12-executive-briefing-risk.png)
+
+### Step 6 — Browse every anomaly at once
+Analysts aren't limited to the top anomaly — every flagged opportunity and risk across every metric/region/week is listed and individually investigable, plus a ranked bar chart of every deviation's magnitude.
+
+![All anomalies list](./screenshots/13-all-anomalies-list.png)
+![All anomalies chart](./screenshots/14-all-anomalies-chart.png)
+
+### Step 7 — Bring your own data
+Any CSV/Excel file with a date column and a numeric metric can be dropped in — no schema migration, no code changes.
+
+![Upload your data](./screenshots/15-upload-your-data.png)
+
+### Step 8 — Ask the copilot directly
+A local, private LLM (Llama 3 via Ollama) answers free-form business questions, grounded only in the pipeline's real output — including suggested starter questions.
+
+![Executive AI Assistant](./screenshots/16-executive-ai-assistant.png)
+
+### Step 9 — Drill into any single week
+For full transparency, any week's raw numbers across every region/metric can be looked up directly.
+
+![Week lookup](./screenshots/17-week-lookup.png)
+
+---
+
+## 4. How AI Enables / Enhances the Solution
+
+AI isn't cosmetic here — it does work that a static dashboard structurally cannot:
+
+| Capability | Where AI is used | Why it matters |
+|---|---|---|
+| **Anomaly framing** | Statistical detection (median/MAD, modified z-score) feeds an AI reasoning layer that turns "a number moved" into "here's a ranked, classified list of what deserves attention" | Removes the manual scan-every-chart step |
+| **Evidence-grounded hypothesis generation** | Candidate explanations are generated *from retrieved evidence*, not from a language model's imagination | Prevents hallucinated root causes — every claim cites a real record ID |
+| **Self-learning confidence engine** | A two-tier system: a heuristic recalibration layer active from the first feedback, upgrading to a `LogisticRegression` classifier once ≥8 labeled decisions exist (retrained from scratch after every Confirm/Reject) | Confidence scores get **measurably more accurate with use** — the system literally learns the analyst's judgment over time, with zero manual retraining step |
+| **Local LLM assistant (Llama 3 / Ollama)** | Grounded chat over the pipeline's actual output (hypotheses, evidence, events) | Lets non-technical stakeholders ask "why" in plain English, privately, with no data leaving the machine |
+| **Forecasting** | Prophet-based trend + seasonality modeling with a graceful linear-trend fallback | Turns anomaly detection from purely reactive into forward-looking |
+| **Executive report generation** | Optional Gemini-powered summarization, with a deterministic offline fallback | Produces decision-ready briefings automatically, with or without cloud AI access |
+
+**Honesty by design:** every AI-generated claim is labeled with its actual epistemic status — "time-correlated, not yet confirmed," "Validated — High Confidence," "train accuracy, not held-out accuracy." This is a deliberate choice to make an explainable, auditable system rather than a black box that sounds confident about everything.
+
+---
+
+## 5. System Architecture
 
 ```
-businessintelligence-ai/
-├── app.py                          # Streamlit dashboard — all UI lives here
-├── data/
-│   ├── raw/                        # Demo dataset (sales, delivery, feedback, events CSVs)
-│   ├── feedback.json               # Analyst confirm/reject history + ML feature snapshots (auto-created)
-│   └── confidence_model.joblib     # Trained self-learning classifier (auto-created once enough feedback exists)
-├── .env                             # GEMINI_API_KEY (optional — see Setup)
-└── ai/
-    ├── data_processor.py            # Loads & weekly-aggregates the DEMO dataset
-    ├── anomaly_detector.py          # Core stats engine: MAD/Z-score detection + opportunity/risk classification
-    ├── evidence_retriever.py        # Pulls raw evidence rows for the DEMO dataset, by time window
-    ├── hypothesis_generator.py      # Generates candidate explanations for the DEMO dataset (fixed templates)
-    ├── hypothesis_tester.py         # Scores any hypothesis set against its cited evidence (generic — works for both modes)
-    ├── reporter.py                  # Executive summary via Gemini, or a deterministic offline fallback
-    ├── universal_pipeline.py        # Universal Mode: ingest ANY uploaded file into the detector's expected shape
-    ├── generic_evidence.py          # Universal Mode: evidence retrieval from user-uploaded supporting files
-    ├── generic_hypothesis.py        # Universal Mode: hypothesis generation from whatever evidence sources exist
-    ├── feedback_store.py            # Analyst confirm/reject storage + calibration stats + heuristic confidence recalibration (JSON-backed)
-    ├── model_trainer.py              # Trains/retrains a real classifier on accumulated feedback - the self-learning engine
-    ├── event_context.py             # Real-world event matching (holidays, disruptions) fed into LLM prompts
-    └── forecasting.py               # Trend forecasting (Prophet if installed, linear-trend fallback otherwise)
+                         ┌─────────────────────────────┐
+                         │        Streamlit UI          │
+                         │           app.py             │
+                         └───────────────┬───────────────┘
+                                          │
+            ┌─────────────────────────────┼─────────────────────────────┐
+            │                              │                              │
+   ┌────────▼─────────┐        ┌───────────▼───────────┐        ┌────────▼────────┐
+   │   Demo Pipeline    │        │   Universal Pipeline   │        │  Local / Cloud   │
+   │ data_processor.py  │        │  universal_pipeline.py │        │  AI Layer        │
+   └────────┬─────────┘        └───────────┬───────────┘        │ (Ollama + Gemini)│
+            │                              │                     └────────┬────────┘
+            └──────────────┬───────────────┘                              │
+                            ▼                                             │
+                 ┌─────────────────────┐                                  │
+                 │  Anomaly Detector    │  (median/MAD, modified z-score) │
+                 │  anomaly_detector.py │                                 │
+                 └──────────┬───────────┘                                 │
+                            ▼                                             │
+              ┌──────────────────────────┐                                │
+              │   Evidence Retrieval      │  (evidence_retriever.py /     │
+              │                            │   generic_evidence.py)       │
+              └──────────────┬─────────────┘                              │
+                              ▼                                           │
+              ┌──────────────────────────┐                                │
+              │  Hypothesis Generation     │ (hypothesis_generator.py /   │
+              │                            │  generic_hypothesis.py)      │
+              └──────────────┬─────────────┘                              │
+                              ▼                                           │
+              ┌──────────────────────────┐                                │
+              │   Hypothesis Testing       │ (hypothesis_tester.py)       │
+              │  (evidence-based scoring)  │                              │
+              └──────────────┬─────────────┘                              │
+                              ▼                                           │
+       ┌──────────────────────────────────────┐                          │
+       │   Self-Learning Confidence Engine       │                       │
+       │  feedback_store.py  +  model_trainer.py │◄──────────────────────┘
+       │  (heuristic Tier-1 + LogisticRegression │  Analyst Confirm/Reject
+       │   Tier-2, retrains after every decision)│  feedback loop
+       └──────────────────┬───────────────────┘
+                           ▼
+              ┌──────────────────────────┐
+              │   Reporter / Executive     │  (reporter.py — Gemini or
+              │   Summary + Forecasting    │   offline fallback; forecasting.py
+              └──────────────────────────┘   — Prophet or linear fallback)
 ```
 
-**Why two hypothesis paths?** `hypothesis_generator.py` uses three fixed templates ("Supply Chain Disruption," "Customer Sentiment Shift," "External Event Impact") that were written for the demo's specific business story. `generic_hypothesis.py` instead generates one candidate **per evidence source you actually upload**, named after whatever you called it — it makes no assumptions about your business. Both feed into the same `hypothesis_tester.py` and `reporter.py`, since those two only need generic `.all_records` / `.total_evidence_count` — they don't care which mode produced the hypotheses. Both paths also call the same `model_trainer.py` / `feedback_store.py` self-learning engine, so confidence scores improve from accumulated feedback regardless of which mode generated the hypothesis.
+**Data flow in one sentence:** raw data → statistical anomaly detection → evidence retrieval (time-windowed) → grounded hypothesis generation → evidence-based scoring → analyst feedback → self-retraining confidence model → forecast + executive briefing + grounded chat.
 
 ---
 
-## Setup
+## 6. Implementation Details
+
+| File | Responsibility |
+|---|---|
+| `app.py` | Streamlit dashboard — all UI, orchestrates every module below |
+| `ai/data_processor.py` | Loads & weekly-aggregates the demo dataset |
+| `ai/anomaly_detector.py` | Core stats engine — MAD/modified-z-score detection + opportunity/risk classification |
+| `ai/evidence_retriever.py` | Pulls raw evidence rows (demo dataset) by anomaly time window |
+| `ai/hypothesis_generator.py` | Fixed-template hypothesis generation for the demo's business story |
+| `ai/universal_pipeline.py` | Ingests **any** uploaded file into the detector's expected shape |
+| `ai/generic_evidence.py` | Evidence retrieval from user-uploaded supporting files (Universal Mode) |
+| `ai/generic_hypothesis.py` | Generates one hypothesis per user-uploaded evidence source — no hardcoded assumptions |
+| `ai/hypothesis_tester.py` | Scores any hypothesis set against its cited evidence (shared by both modes) |
+| `ai/feedback_store.py` | Stores analyst Confirm/Reject decisions; Tier-1 heuristic confidence recalibration |
+| `ai/model_trainer.py` | Trains/retrains the Tier-2 `LogisticRegression` confidence classifier after every feedback event |
+| `ai/reporter.py` | Executive summary generation (Gemini or deterministic offline fallback) |
+| `ai/event_context.py` | Matches real-world events (holidays, disruptions, promotions) into LLM prompts |
+| `ai/forecasting.py` | Trend forecasting — Prophet if installed, linear-trend fallback otherwise |
+
+**Design principle — two hypothesis paths, one scoring/reporting core:** `hypothesis_generator.py` (demo) and `generic_hypothesis.py` (Universal Mode) both only need to produce `.all_records` / `.total_evidence_count` — so `hypothesis_tester.py` and `reporter.py` don't care which mode produced them. This keeps the AI/scoring core mode-agnostic and easy to extend.
+
+---
+
+## 7. Key Features
+
+- **Robust anomaly detection** — median/MAD baseline, causally-built (never looks at future weeks), self-correcting (a flagged week doesn't contaminate its own future baseline).
+- **Opportunity vs. Risk classification** — automatic for known metrics, analyst-configurable ("higher is better" toggle) for uploaded metrics.
+- **Evidence-cited, click-to-verify hypotheses** — every citation (e.g. `DEL-1792`) opens the exact raw source row, proving it isn't hallucinated.
+- **Self-learning confidence engine** — improves measurably every session from analyst feedback, with zero manual retraining.
+- **Analyst calibration loop** — Confirm/Reject on every hypothesis, with a live agreement-rate and model-status panel.
+- **Forecasting with confidence bands** — Prophet-powered where available.
+- **Local, private LLM assistant** — grounded Q&A with no data leaving the machine (Ollama/Llama 3), with an optional cloud (Gemini) executive-summary upgrade.
+- **Universal Mode** — works on *any* tabular business data, not just the demo dataset.
+- **Full transparency** — every AI-derived number states its own confidence and derivation method in the UI.
+
+---
+
+## 8. Scalability
+
+- **Data-agnostic core.** The anomaly detector and hypothesis-testing engine operate on any date + numeric-metric + optional-category table — onboarding a new business unit, KPI, or client is a column-mapping exercise, not a code change.
+- **Modular evidence sources.** `generic_evidence.py` treats every uploaded file as an independent evidence source; adding a new type of business record (support tickets, marketing spend, weather data) requires no changes to detection, testing, or reporting.
+- **Model retraining is O(feedback), not O(data).** The self-learning confidence classifier trains on one row per analyst decision, so it stays fast and interpretable even as the underlying business data grows into millions of rows.
+- **Pluggable AI backends.** Local Llama 3 (cost-free, private) and Gemini (higher-quality summaries) are interchangeable via a single fallback pattern already used for Prophet — the same pattern makes it straightforward to add other LLM providers later.
+- **Path to multi-tenant / production.** The current single-JSON feedback store is intentionally simple for a single analyst; the architecture (stateless detection + testing functions, a clearly separated feedback/model layer) maps cleanly onto a real database and per-tenant model versioning without redesigning the core pipeline.
+- **Horizontal scale-out.** Because detection and hypothesis testing are stateless, pure functions over a given metric/time-window, they can be parallelized per metric/region/client with no architectural change — a natural fit for a queue-based or serverless deployment as data volume grows.
+
+---
+
+## 9. Impact
+
+- **Time saved per investigation.** Replaces a manual, multi-tool root-cause investigation (spreadsheets + tickets + calendars, often 30–60+ minutes) with an automated, evidence-cited hypothesis in seconds.
+- **Consistency.** Every anomaly is investigated the same rigorous way, regardless of which analyst is on shift or how busy they are — no more "we only look into the ones someone happens to notice."
+- **Compounding institutional knowledge.** Every Confirm/Reject decision doesn't just resolve one incident — it permanently improves the system's future judgment on similar situations, turning tribal knowledge into a durable, auditable asset instead of something that leaves with the analyst.
+- **Trust through transparency.** Because every hypothesis is evidence-cited and every confidence score explains its own derivation, the system is usable in real decision-making without the "black box AI" trust gap that blocks adoption of most AI insight tools.
+- **Accessible to non-technical stakeholders.** The grounded chat assistant lets anyone — not just analysts fluent in SQL/BI tools — ask "why did this happen?" in plain English and get an answer traceable to real records.
+- **Data-sovereignty friendly.** Runs fully offline with a local LLM, making it viable for cost-sensitive teams and organizations that can't send business data to third-party cloud AI.
+
+---
+
+## 10. Tech Stack
+
+Python · Streamlit · Plotly · Pandas · NumPy · scikit-learn (self-learning confidence model) · Ollama (local Llama 3) · Google Gemini (optional) · Prophet (optional)
+
+---
+
+## 11. Setup & Run
 
 ### 1. Install dependencies
 ```bash
 pip install streamlit pandas numpy plotly ollama python-dotenv pydantic
-pip install scikit-learn joblib   # powers the self-learning confidence model (ai/model_trainer.py)
-pip install prophet          # optional — enables better forecasting; falls back gracefully if skipped
-pip install google-genai     # optional — enables Gemini-powered executive summaries
+pip install scikit-learn joblib   # self-learning confidence model
+pip install prophet               # optional — better forecasting
+pip install google-genai          # optional — Gemini-powered executive summaries
 ```
 
 ### 2. Set up the local LLM (optional but recommended)
@@ -77,87 +260,39 @@ pip install google-genai     # optional — enables Gemini-powered executive sum
 # Install Ollama from https://ollama.com, then:
 ollama pull llama3
 ```
-If Ollama isn't running, the chat assistant will show a connection error but the rest of the app works fine.
 
-### 3. Optional: Gemini API key for richer executive summaries
-Create a `.env` file **at the project root** (same folder as `app.py`, not inside `ai/`):
+### 3. Optional: Gemini API key
+Create a `.env` file at the project root:
 ```
 GEMINI_API_KEY="your-key-here"
 ```
-Without this, the reporter automatically falls back to a deterministic offline summary based on the actual hypothesis verdicts — it does not need Gemini to function.
-
-⚠️ **Never commit `.env` to version control.** Add it to `.gitignore`. If a key is ever accidentally exposed (e.g., pasted into a screenshot or chat), rotate it immediately in the provider's console.
+Never commit `.env` to version control.
 
 ### 4. Run it
 ```bash
 streamlit run app.py
 ```
 
-If you edit any file under `ai/`, you must **fully restart** Streamlit (`Ctrl+C`, then re-run) — Python caches imported modules for the life of the process, so a browser refresh alone won't pick up backend changes.
+---
+
+## 12. Known Limitations
+
+- No seasonality modeling — recurring weekly/holiday patterns may be repeatedly flagged as anomalies.
+- One global anomaly threshold across all metrics.
+- Evidence matching is **temporal correlation, not causation**.
+- Confidence scores are heuristic and continuously calibrating, not statistically validated ground truth.
+- The trained classifier's reported accuracy is train-set accuracy, not held-out validation accuracy (disclosed directly in the UI).
+- Universal Mode's full hypothesis pipeline requires the analyst to supply evidence sources; without them the system correctly reports "Unexplained Statistical Deviation" rather than inventing a cause.
+- Single-JSON feedback store — fine for one analyst, not yet multi-user production-ready.
+
+## 13. Roadmap
+
+- Per-metric anomaly thresholds instead of one global cutoff
+- Seasonality-aware baseline modeling
+- Multi-user, database-backed feedback store with per-tenant model versioning
+- Held-out validation split for the confidence classifier once usage volume supports it
+- Additional evidence-source connectors (ticketing systems, marketing platforms, IoT/ops data)
 
 ---
 
-## Feature guide
-
-### Anomaly detection
-Uses a **median + Median Absolute Deviation (MAD)** baseline instead of mean/std — robust to the anomaly itself contaminating its own baseline. Flags a week when `|modified z-score| ≥ 3.5` **and** the deviation is at least 5% in real terms (a purely statistical blip on tiny numbers isn't flagged). Baselines are built causally (never look at future weeks) and self-correcting (a flagged week is excluded from future baselines, so a multi-week event doesn't drag its own comparison point along with it).
-
-### Opportunity vs. Risk
-Each anomaly is tagged `OPPORTUNITY` or `RISK` based on metric direction. Revenue/units going up = opportunity; delivery delays/late rates going up = risk. You control this explicitly for uploaded metrics via a "higher is better / lower is better" toggle.
-
-### Evidence & Hypotheses
-Every cited evidence ID (e.g. `DEL-1792`, `FB-751`) is clickable and opens the **exact raw row** from the source file it came from, styled with a glowing highlight — proving the citation is real, not hallucinated. Confidence scores are derived from how much of the total retrieved evidence supports each candidate (more evidence, more of it concentrated on one candidate → higher score), capped below 1.0 since this method should never claim certainty.
-
-### Self-Learning Confidence Engine
-
-This is what makes confidence scores **improve every session** instead of staying fixed at design time. It's a two-tier system that upgrades itself automatically as feedback accumulates — there's no separate "training day," no manual retraining step, and no external database; everything lives in `data/feedback.json` and `data/confidence_model.joblib`.
-
-**Tier 1 — Heuristic recalibration (`feedback_store.get_confidence_adjustment`)**
-Active from the very first piece of feedback. Looks at every past analyst Confirm/Reject decision for the *exact same* (metric, hypothesis type) pair — e.g. "Supply Chain Disruption & Late Deliveries" raised specifically for "Avg Delivery Days" anomalies — and nudges that hypothesis type's confidence score by up to ±0.12 based on its historical confirm rate. Needs at least 3 prior decisions before it acts, so it never overreacts to one lucky or unlucky guess. Fully transparent: the exact math is in the function's docstring, and the UI shows precisely how many past decisions produced the adjustment.
-
-**Tier 2 — Trained classifier (`ai/model_trainer.py`)**
-Once at least 8 labeled decisions exist (with at least 2 Confirmed *and* 2 Rejected — a classifier needs both classes to learn anything), the system trains a `LogisticRegression` on six features snapshotted at feedback time: evidence count, evidence-derived base confidence, anomaly deviation %, modified z-score, severity, and opportunity/risk. The label is simply whether the analyst confirmed or rejected that hypothesis. **This model retrains from scratch after every single Confirm/Reject click** — so the classifier scoring the next hypothesis is never more than one decision stale. Its prediction is blended 50/50 with the evidence-based score, and the UI shows a 🤖 badge naming the sample count and training accuracy it was built on.
-
-Once the trained model has enough data to activate, it takes over from the Tier-1 heuristic for that scoring step; below the data threshold, Tier 1 keeps things running so the "self-learning" behavior is visible even on session one.
-
-**Why logistic regression and not something fancier:** the training set is one row per analyst decision — realistically dozens to a few hundred rows for a single analyst's usage, not a web-scale dataset. A higher-capacity model would overfit immediately and produce confidence numbers that *look* precise but mean nothing, which is exactly the anti-pattern this project's original `_derive_confidence()` was written to avoid. Logistic regression's coefficients are also directly inspectable, which matters for a system whose entire premise is explainable, auditable scoring rather than a black box.
-
-**Honesty note on the reported accuracy:** the number shown in the sidebar ("Train accuracy: X%") is accuracy on the same data the model was trained on, not held-out validation accuracy. With only a handful to a few dozen labeled examples, a real train/test split would be too noisy to be meaningful — this is disclosed directly in the UI rather than presented as a validated benchmark. As real usage volume grows, a proper held-out split becomes worth adding.
-
-**Graceful degradation:** if `scikit-learn`/`joblib` aren't installed, or there isn't yet enough labeled data, `predict_confidence()` returns "not available" and the system falls back to the Tier-1 heuristic automatically — the same optional-dependency pattern already used for Prophet in `forecasting.py`.
-
-### Analyst Calibration (confirm/reject)
-Every hypothesis has ✅ Confirm / ❌ Reject buttons. This is the single most important feature for real-world use — it's the only way to check whether the system's own scoring is actually any good, and it's also literally the training signal for the Self-Learning Confidence Engine above. Feedback persists to `data/feedback.json` and the sidebar shows a running **agreement rate** (how often "Validated" was later confirmed true, and "Refuted" confirmed false) alongside the current confidence model's status: whether it's trained yet, on how many examples, and its training accuracy.
-
-### Real-world event context
-Upload a CSV of known events (holidays, promotions, disruptions — needs at least a date and description column) and the local LLM will be told about any events matching the week it's discussing, so it can factor real-world context into its commentary instead of only seeing numbers.
-
-### Forecasting
-Projects a metric forward a chosen number of weeks with a shaded confidence band. Uses Prophet if installed (better seasonality handling), otherwise a linear-trend + residual-based band that needs no extra dependencies. Labeled clearly as a simple projection, not a validated forecasting model.
-
-### Week Lookup & Dashboard Retargeting
-Look up any week's raw numbers directly, or click "🎯 Analyze this week" to re-run the full pipeline against that week specifically — not just the single highest-magnitude anomaly the system finds by default.
-
----
-
-## Known Limitations
-
-Documented here deliberately, so nobody mistakes this for more rigorous than it is:
-
-- **No seasonality modeling.** Weekly/monthly/holiday patterns in real data will likely get flagged as repeated "anomalies" until you account for this.
-- **One global anomaly threshold** across all metrics — a naturally noisy metric will false-positive more than a stable one at the same cutoff.
-- **Evidence matching is temporal correlation, not causation.** A record existing in the same week as an anomaly is not proof it caused the anomaly.
-- **Confidence scores are heuristic, not statistically validated** — they react to evidence volume, but haven't been checked against real, known outcomes. Use the confirm/reject workflow to start building that validation.
-- **The trained confidence classifier's reported accuracy is train-set accuracy, not held-out validation accuracy.** With a small number of labeled analyst decisions, a real train/test split would be too noisy to trust — the sidebar states this plainly. Treat the model as a lightweight, continuously-updating recalibration layer, not a validated predictive model, until real usage volume justifies a proper split.
-- **The self-learning loop learns analyst agreement patterns, not ground truth about the business.** If analysts are systematically wrong about a hypothesis type, the model will confidently learn to agree with that mistake. The confirm/reject workflow is only as good as the legwork behind each decision.
-- **No seasonality-aware regime-change detection** — a permanent business shift (e.g., a real price increase) will keep getting flagged as "anomalous" indefinitely rather than becoming the new accepted baseline.
-- **Universal Mode's full pipeline requires you to supply your own evidence sources.** Without them, the system correctly reports "Unexplained Statistical Deviation" rather than inventing a cause — this is intentional, not a bug.
-- **Not access-controlled or audited** beyond the JSON feedback file — fine for a single analyst's own use, not yet ready for multi-user production deployment.
-
-**Recommendation before relying on this for real decisions:** backtest it against a few months of your own historical data where you already know what happened, and start using the confirm/reject workflow immediately so the calibration panel reflects reality rather than showing zero entries.
-
----
-
-## Tech stack
-
-Python · Streamlit · Plotly · Pandas · NumPy · scikit-learn (self-learning confidence model) · Ollama (local Llama 3) · Google Gemini (optional) · Prophet (optional)
+*Built by Team Scubacats for the Accenture Innovation Challenge 2026.*
