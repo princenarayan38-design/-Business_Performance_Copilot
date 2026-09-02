@@ -1,0 +1,40 @@
+{
+  "Avg Delivery Days|North|16|H1": {
+    "key": "Avg Delivery Days|North|16|H1",
+    "metric": "Avg Delivery Days",
+    "dimension_value": "North",
+    "week": 16,
+    "hypothesis_id": "H1",
+    "hypothesis_title": "Supply Chain Disruption & Late Deliveries",
+    "system_verdict": "Validated",
+    "system_score": 0.71,
+    "analyst_verdict": "Confirmed",
+    "note": "",
+    "timestamp": "2026-09-02T14:01:04.246290+00:00",
+    "evidence_count": 2,
+    "base_confidence_score": 0.52,
+    "deviation_pct": 1.185818203323674,
+    "modified_z_score": 644.02,
+    "severity": "HIGH",
+    "nature": "RISK"
+  },
+  "Avg Delivery Days|North|16|H3": {
+    "key": "Avg Delivery Days|North|16|H3",
+    "metric": "Avg Delivery Days",
+    "dimension_value": "North",
+    "week": 16,
+    "hypothesis_id": "H3",
+    "hypothesis_title": "External Market or Regional Event Impact",
+    "system_verdict": "Inconclusive",
+    "system_score": 0.68,
+    "analyst_verdict": "Rejected",
+    "note": "",
+    "timestamp": "2026-09-02T14:04:57.655825+00:00",
+    "evidence_count": 1,
+    "base_confidence_score": 0.46,
+    "deviation_pct": 1.185818203323674,
+    "modified_z_score": 644.02,
+    "severity": "HIGH",
+    "nature": "RISK"
+  }
+}
